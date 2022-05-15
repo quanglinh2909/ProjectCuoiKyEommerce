@@ -13,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.constant.URL;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.squareup.picasso.Picasso;
 
@@ -35,6 +36,7 @@ public class AdapterBannerHome extends PagerAdapter {
         Banner banner = mListBanners.get(position);
         if(banner != null){
 //            Glide.with(mContext).load(Uri.parse(URL.BASE_URL+"images/Banner.jpg")).into(imageItemBanner);
+            Glide.with(view.getContext()).load(URL.BASE_URL+"images/Banner.jpg").placeholder(R.drawable.banner_item1).dontAnimate().into(imageItemBanner);
 
         }
 
