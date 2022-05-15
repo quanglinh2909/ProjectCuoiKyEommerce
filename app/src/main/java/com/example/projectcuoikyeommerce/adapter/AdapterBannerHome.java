@@ -1,6 +1,7 @@
 package com.example.projectcuoikyeommerce.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.constant.URL;
 import com.example.projectcuoikyeommerce.model.Banner;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -31,7 +35,8 @@ public class AdapterBannerHome extends PagerAdapter {
         ImageView imageItemBanner = view.findViewById(R.id.imgItemBanner);
         Banner banner = mListBanners.get(position);
         if(banner != null){
-//            Glide.with(mContext).load(R.drawable.banner_item1).into(imageItemBanner);
+            Glide.with(mContext).load(Uri.parse(URL.BASE_URL+"images/Banner.jpg")).into(imageItemBanner);
+
         }
 
         container.addView(view);

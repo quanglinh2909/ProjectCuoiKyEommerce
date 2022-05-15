@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/header"
     android:layout_width="match_parent"
     android:layout_height="60dp"
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:background="@drawable/header"
-    android:clipToOutline="true"
-    >
+    android:clipToOutline="true">
     <ImageButton
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -44,5 +43,6 @@
         android:id="@+id/btnShoppingBag"
         android:background="@android:color/transparent"
         android:src="@drawable/ic_shopping_bag" />
+
 
 </RelativeLayout>
