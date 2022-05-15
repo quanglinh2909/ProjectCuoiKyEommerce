@@ -3,6 +3,7 @@ package com.example.projectcuoikyeommerce.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ public class HomeFragment extends Fragment {
     private CircleIndicator circleIndicatorBanner;
     private AdapterBannerHome adapterBannerHome;
     private View mView;
+    private RecyclerView listProduct;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -53,6 +55,7 @@ public class HomeFragment extends Fragment {
     private void initUi() {
         viewPagerBanner = mView.findViewById(R.id.viewPagerBanner);
         circleIndicatorBanner = mView.findViewById(R.id.circleIndicatorBanner);
+        listProduct=mView.findViewById(R.id.list_item_product);
     }
     private void initBanner() {
         adapterBannerHome = new AdapterBannerHome(mView.getContext(),getListBanner());
@@ -60,6 +63,7 @@ public class HomeFragment extends Fragment {
         circleIndicatorBanner.setViewPager(viewPagerBanner);
         adapterBannerHome.registerDataSetObserver(circleIndicatorBanner.getDataSetObserver());
     }
+
     private List<Banner> getListBanner() {
         List<Banner> bannerList = new ArrayList<>();
         bannerList.add(new Banner("",""));

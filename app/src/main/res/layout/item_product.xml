@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="82.50dp"
+    android:layout_height="wrap_content"
+
+    >
+    <ImageView
+        android:id="@+id/item_product_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/image_product_demo"/>
+    <TextView
+        android:id="@+id/item_prodcut_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="21WN reversible angora cardigan"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="6dp"
+        android:textFontWeight="400"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/item_product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$120"
+        android:textSize="7.50dp"
+        android:gravity="center"
+        android:textColor="#DD8560"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        />
+
+
+
+</LinearLayout>
