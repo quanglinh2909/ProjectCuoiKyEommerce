@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.adapter.AdapterBannerHome;
 import com.example.projectcuoikyeommerce.model.Banner;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,4 +53,6 @@ public class MainActivity extends AppCompatActivity {
         viewPagerBanner = findViewById(R.id.viewPagerBanner);
         circleIndicatorBanner = findViewById(R.id.circleIndicatorBanner);
     }
+
+
 }
