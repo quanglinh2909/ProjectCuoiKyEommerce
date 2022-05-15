@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 MenuBottomSheet menuBottomSheet = new MenuBottomSheet();
                 menuBottomSheet.show(getSupportFragmentManager(),menuBottomSheet.getTag());
+
+                menuBottomSheet.setCancelable(false);
+
             }
         });
     }

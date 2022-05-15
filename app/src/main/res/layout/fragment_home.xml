@@ -42,7 +42,7 @@
           android:id="@+id/underline"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:src="@drawable/underLine"
+          android:src="@drawable/under_line"
           android:layout_gravity="center"/>
       <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/list_item_product"

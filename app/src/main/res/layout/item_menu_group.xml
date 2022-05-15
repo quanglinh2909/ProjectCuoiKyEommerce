@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:text="item menu 1"
-    android:id="@+id/txtItemMenu"
     android:padding="20dp"
-    android:layout_marginLeft="70dp"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtItemMenuGroup"
+        />
 
-</TextView>
+    <ImageView
+        android:id="@+id/imgDropAndUp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+    </ImageView>
+
+
+</RelativeLayout>
