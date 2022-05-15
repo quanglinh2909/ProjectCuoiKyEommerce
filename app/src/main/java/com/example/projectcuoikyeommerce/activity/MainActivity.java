@@ -1,6 +1,8 @@
 package com.example.projectcuoikyeommerce.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -11,6 +13,8 @@ import android.widget.ImageView;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.adapter.AdapterBannerHome;
+import com.example.projectcuoikyeommerce.constant.FragmentID;
+import com.example.projectcuoikyeommerce.fragment.HomeFragment;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.squareup.picasso.Picasso;
 
@@ -20,38 +24,23 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity {
-    private ViewPager viewPagerBanner;
-    private CircleIndicator circleIndicatorBanner;
-    private AdapterBannerHome adapterBannerHome;
+   private int currentFragment = FragmentID.FRAGMENT_HOME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        init();
-        initBanner();
+        replaceFragment(new HomeFragment());
+
+
     }
 
-    private void initBanner() {
-        adapterBannerHome = new AdapterBannerHome(this,getListBanner());
-        viewPagerBanner.setAdapter(adapterBannerHome);
-        circleIndicatorBanner.setViewPager(viewPagerBanner);
-        adapterBannerHome.registerDataSetObserver(circleIndicatorBanner.getDataSetObserver());
-    }
 
-    private List<Banner> getListBanner() {
-        List<Banner> bannerList = new ArrayList<>();
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
-        return bannerList;
-    }
-
-    private void init() {
-        viewPagerBanner = findViewById(R.id.viewPagerBanner);
-        circleIndicatorBanner = findViewById(R.id.circleIndicatorBanner);
+    private void replaceFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.containerFragment,fragment);
+        fragmentTransaction.commit();
     }
 
 

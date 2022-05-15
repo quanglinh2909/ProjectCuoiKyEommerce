@@ -1,6 +1,6 @@
 package com.example.projectcuoikyeommerce.constant;
 
-public class Fragment {
+public class FragmentID {
     public static final int FRAGMENT_HOME = 1;
     public static final int FRAGMENT_CATEGORY = 2;
     public static final int FRAGMENT_ADD_NEW_ADDRESS = 3;

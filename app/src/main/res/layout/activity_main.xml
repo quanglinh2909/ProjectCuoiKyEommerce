@@ -6,29 +6,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/containerFragment"
     tools:context=".activity.MainActivity">
 
    <include
        layout="@layout/header"
        />
-   <FrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="600dp">
 
-      <androidx.viewpager.widget.ViewPager
-          android:id="@+id/viewPagerBanner"
-          android:layout_width="match_parent"
-          android:layout_height="600dp">
-
-      </androidx.viewpager.widget.ViewPager>
-      <me.relex.circleindicator.CircleIndicator
-          android:layout_width="300dp"
-          android:layout_gravity="bottom|center"
-          android:id="@+id/circleIndicatorBanner"
-          android:layout_height="50dp">
-
-      </me.relex.circleindicator.CircleIndicator>
-
-   </FrameLayout>
 
 </LinearLayout>
