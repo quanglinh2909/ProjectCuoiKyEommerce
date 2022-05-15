@@ -35,13 +35,6 @@ public class AdapterBannerHome extends PagerAdapter {
         ImageView imageItemBanner = view.findViewById(R.id.imgItemBanner);
         Banner banner = mListBanners.get(position);
         if(banner != null){
-            RequestOptions options = new RequestOptions()
-                    .centerCrop()
-                    .placeholder(R.mipmap.ic_launcher_round)
-                    .error(R.mipmap.ic_launcher_round);
-
-
-
             Glide.with(mContext).load(Uri.parse(URL.BASE_URL_IPV4+"images/Banner.jpg")).into(imageItemBanner);
 
         }
