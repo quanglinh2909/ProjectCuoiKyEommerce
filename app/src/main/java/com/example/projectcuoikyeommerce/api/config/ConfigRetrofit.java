@@ -24,7 +24,6 @@ public class ConfigRetrofit {
                 .create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

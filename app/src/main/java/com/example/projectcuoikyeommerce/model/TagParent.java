@@ -1,35 +1,23 @@
 package com.example.projectcuoikyeommerce.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.Objects;
+
 public class TagParent {
-    private String id;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("name")
+    @Expose
     private String name;
-    private int idNumber;
 
-    public TagParent(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public TagParent(String id, String name, int idNumber) {
-        this.id = id;
-        this.name = name;
-        this.idNumber = idNumber;
-    }
-
-    public int getIdNumber() {
-        return idNumber;
-    }
-
-
-    public void setIdNumber(int idNumber) {
-        this.idNumber = idNumber;
-    }
-
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -41,11 +29,29 @@ public class TagParent {
         this.name = name;
     }
 
+    public TagParent(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "TagParent{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TagParent tagParent = (TagParent) o;
+        return Objects.equals(id, tagParent.id) && Objects.equals(name, tagParent.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 }
