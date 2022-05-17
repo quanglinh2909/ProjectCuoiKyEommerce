@@ -25,13 +25,13 @@
           android:layout_marginLeft="16dp"
           android:background="@android:color/transparent"
           />
+
       <ImageView
+          android:id="@+id/btnBackHome"
           android:layout_width="78dp"
           android:layout_height="32dp"
-          android:src="@drawable/logo"
-          android:layout_centerVertical="true"
-          android:layout_centerHorizontal="true"
-          />
+          android:layout_centerInParent="true"
+          android:src="@drawable/logo" />
 
       <ImageButton
           android:layout_width="24dp"

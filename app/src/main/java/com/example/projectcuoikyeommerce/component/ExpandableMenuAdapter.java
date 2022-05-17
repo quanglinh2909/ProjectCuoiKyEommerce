@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.event.MenuEvent;
 import com.example.projectcuoikyeommerce.model.TagChild;
 import com.example.projectcuoikyeommerce.model.TagParent;
 
@@ -18,10 +19,12 @@ import java.util.Map;
 public class ExpandableMenuAdapter extends BaseExpandableListAdapter {
     private List<TagParent> mListGroup;
     private Map<TagParent, List<TagChild>> mListItem;
+    private MenuEvent menuEvent;
 
-    public ExpandableMenuAdapter(List<TagParent> mListGroup, Map<TagParent, List<TagChild>> mListItem) {
+    public ExpandableMenuAdapter(List<TagParent> mListGroup, Map<TagParent, List<TagChild>> mListItem, MenuEvent menuEvent) {
         this.mListGroup = mListGroup;
         this.mListItem = mListItem;
+        this.menuEvent = menuEvent;
     }
 
     @Override
@@ -100,6 +103,10 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter {
         TextView textView = convertView.findViewById(R.id.txtItemMenuChirent);
         TagChild tagChild = mListItem.get(mListGroup.get(groupPosition)).get(childPosition);
         textView.setText(tagChild.getName());
+
+        textView.setOnClickListener(v -> {
+            menuEvent.clickItem();
+        });
         return convertView;
     }
 
