@@ -34,10 +34,9 @@ public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderProduct holder, int position) {
-        Log.d("Object",holder.toString());
         Product product=listProduct.get(position);
-        Log.d("Object",product.toString());
         holder.titleProductView.setText(product.getName());
+        holder.branchProductView.setText(product.getBranch().getName());
         holder.priceProductView.setText(product.getPrice()+"");
 
     }
@@ -51,13 +50,16 @@ class ViewHolderProduct extends RecyclerView.ViewHolder{
     AdapterProductHome adapter;
     ImageView imageProductView;
     TextView titleProductView;
+    TextView branchProductView;
     TextView priceProductView;
 
     public ViewHolderProduct(@NonNull View itemView) {
         super(itemView);
         imageProductView=itemView.findViewById(R.id.item_product_image);
         titleProductView=itemView.findViewById(R.id.item_product_name);
+        branchProductView=itemView.findViewById(R.id.item_product_branch);
         priceProductView=itemView.findViewById(R.id.item_product_price);
+
     }
     public ViewHolderProduct linkAdapter(AdapterProductHome adapter){
         this.adapter=adapter;
