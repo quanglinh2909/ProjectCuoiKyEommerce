@@ -3,12 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.CategoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_marginTop="17dp"
+          android:layout_width="match_parent"
+          android:layout_height="40dp">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="4500 Apparel"
+              android:gravity="center|left"
+              android:fontFamily="@font/tenor_sans"
+              android:textSize="18sp"
+              android:textFontWeight="400"
+              android:layout_marginLeft="15dp"
+              android:textColor="#333333"
+              >
+          </TextView>
 
+          <ImageButton
+              android:layout_marginTop="2dp"
+              android:id="@+id/btnFilter"
+              android:layout_width="36dp"
+              android:layout_height="36dp"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="16dp"
+              android:background="@drawable/border_radius_category"
+              android:scaleType="center"
+              android:src="@drawable/ic_filter">
+
+          </ImageButton>
+
+          <ImageButton
+              android:layout_marginTop="2dp"
+              android:layout_width="36dp"
+              android:id="@+id/btnListViewAndGirdView"
+              android:layout_height="36dp"
+              android:layout_marginRight="17dp"
+              android:layout_toLeftOf="@id/btnFilter"
+              android:background="@drawable/border_radius_category"
+              android:scaleType="center"
+              android:src="@drawable/ic_listview"
+              >
+
+          </ImageButton>
+
+      </RelativeLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerViewCategory"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+      </androidx.recyclerview.widget.RecyclerView>
+  </LinearLayout>
 </FrameLayout>

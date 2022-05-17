@@ -6,7 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/containerFragment"
     tools:context=".activity.MainActivity">
 
    <RelativeLayout
@@ -55,6 +54,28 @@
 
 
    </RelativeLayout>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/containerFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+        <include layout="@layout/footer"
+            android:layout_below="@id/containerFragment"
+            android:layout_height="340dp"
+            android:layout_width="match_parent">
+        </include>
+     </RelativeLayout>
+
+
+
+  </ScrollView>
 
 
 </LinearLayout>

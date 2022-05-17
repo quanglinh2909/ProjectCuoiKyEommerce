@@ -25,6 +25,7 @@ import com.example.projectcuoikyeommerce.api.config.ApiUtils;
 import com.example.projectcuoikyeommerce.api.config.ConfigRetrofit;
 import com.example.projectcuoikyeommerce.component.MenuBottomSheet;
 import com.example.projectcuoikyeommerce.constant.FragmentID;
+import com.example.projectcuoikyeommerce.fragment.CategoryFragment;
 import com.example.projectcuoikyeommerce.fragment.HomeFragment;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.TagChild;
@@ -49,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         initUi();
         handleAction();
-        replaceFragment(new HomeFragment());
+//        replaceFragment(new HomeFragment());
+        replaceFragment(new CategoryFragment());
 
 
 

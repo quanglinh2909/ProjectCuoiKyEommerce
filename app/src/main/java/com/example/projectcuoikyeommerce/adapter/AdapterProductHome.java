@@ -35,9 +35,9 @@ public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderProduct holder, int position) {
         Product product=listProduct.get(position);
-        holder.titleProductView.setText(product.getName());
-        holder.branchProductView.setText(product.getBranch().getName());
-        holder.priceProductView.setText(product.getPrice()+"");
+//        holder.titleProductView.setText(product.getName());
+//        holder.branchProductView.setText(product.getBranch().getName());
+//        holder.priceProductView.setText(product.getPrice()+"");
 
     }
 
