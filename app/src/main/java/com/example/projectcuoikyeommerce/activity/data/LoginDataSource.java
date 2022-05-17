@@ -6,6 +6,7 @@ import java.io.IOException;
 
 /**
  * Class that handles authentication w/ login credentials and retrieves user information.
+ * Lớp xử lý xác thực w / thông tin đăng nhập và truy xuất thông tin người dùng.
  */
 public class LoginDataSource {
 

@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 
 /**
  * Data validation state of the login form.
+ * Trạng thái xác thực dữ liệu của biểu mẫu đăng nhập.
  */
 class LoginFormState {
     @Nullable
