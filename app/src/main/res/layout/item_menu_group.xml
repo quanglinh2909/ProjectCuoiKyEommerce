@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <TextView
+        android:fontFamily="@font/tenor_sans"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:id="@+id/txtItemMenuGroup"
+        android:textColor="#333333"
+        android:layout_marginLeft="18dp"
+        android:textFontWeight="400"
+        android:gravity="center|left"
+        />
+
+    <ImageView
+        android:layout_marginLeft="17dp"
+        android:id="@+id/imgDropAndUp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+    </ImageView>
+
+
+</RelativeLayout>

@@ -1,14 +1,17 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
     <style name="Theme.ProjectCuoiKyEommerce" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
         <!-- Status bar color. -->
         <item name="android:navigationBarColor">
             #E7EAEF
@@ -18,10 +21,8 @@
         <item name="android:statusBarColor">
             #E7EAEF
         </item>
-
-        <!-- Optional: set the status bar light and content dark. -->
-
-
-        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">
+            true
+        </item>
     </style>
 </resources>

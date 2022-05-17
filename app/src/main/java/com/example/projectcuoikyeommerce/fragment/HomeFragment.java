@@ -111,11 +111,11 @@ public class HomeFragment extends Fragment {
         List<Product> list=new ArrayList<>();
         Branch branch=new Branch("br1","New Branch","Branch New Arrival","url");
         Collection collection=new Collection("collect1","bst authumn","mua thu vui ve");
-        TagChild tagChild=new TagChild("tagChild1","idParent");
-        list.add(new Product("pr1",branch,"21WN reversible angora cardigan",43000,43,54,32,11,collection,tagChild));
-        list.add(new Product("pr2",branch,"21WN reversible angora cardigan",53000,43,54,32,11,collection,tagChild));
-        list.add(new Product("pr3",branch,"21WN reversible angora cardigan",67000,43,54,32,11,collection,tagChild));
-        list.add(new Product("pr4",branch,"21WN reversible angora cardigan",400000,43,54,32,11,collection,tagChild));
+        TagChild tagChild=new TagChild(1,"idParent",null);
+        list.add(new Product("pr1",branch,"sp1",43000,43,54,32,11,collection,tagChild));
+        list.add(new Product("pr2",branch,"sp2",53000,43,54,32,11,collection,tagChild));
+        list.add(new Product("pr3",branch,"sp3",67000,43,54,32,11,collection,tagChild));
+        list.add(new Product("pr4",branch,"sp4",400000,43,54,32,11,collection,tagChild));
         return list;
     }
     private List<Banner> getListBanner() {

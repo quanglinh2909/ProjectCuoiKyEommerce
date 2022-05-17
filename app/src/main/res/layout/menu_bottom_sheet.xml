@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+     <androidx.core.widget.NestedScrollView
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+             <ImageButton
+                 android:layout_width="24dp"
+                 android:id="@+id/btnCloseMenu"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginLeft="16dp"
+                 android:background="@android:color/transparent"
+                 android:src="@drawable/ic_close"
+                 android:scaleType="fitXY"
+                 android:layout_height="24dp">
+
+             </ImageButton>
+             <TextView
+                 android:text="Women"
+                 android:fontFamily="@font/tenor_sans"
+                 android:textSize="20sp"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="20dp"
+                 android:textFontWeight="600"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+
+             </TextView>
+          </RelativeLayout>
+           <FrameLayout
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="10dp">
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:src="@drawable/line_top_menu"
+                  android:scaleType="centerCrop"
+                  android:layout_gravity="center"
+                  android:layout_height="1dp">
+
+              </ImageView>
+              <ImageView
+                  android:layout_width="10dp"
+                  android:src="@drawable/rectangle_menu_top"
+                  android:scaleType="fitXY"
+                  android:layout_gravity="center"
+                  android:layout_height="10dp">
+
+              </ImageView>
+           </FrameLayout>
+
+
+           <ExpandableListView
+               android:layout_marginTop="30dp"
+               android:layout_below="@id/btnCloseMenu"
+               android:layout_width="match_parent"
+               android:divider="@android:color/transparent"
+               android:id="@+id/expandableListViewMenu"
+               android:scrollbars="none"
+               android:nestedScrollingEnabled="false"
+               android:groupIndicator="@null"
+               android:layout_height="wrap_content">
+
+           </ExpandableListView>
+           <RelativeLayout
+               android:layout_below="@id/expandableListViewMenu"
+               android:layout_width="match_parent"
+               android:id="@+id/relativeCall"
+               android:layout_height="wrap_content">
+              <ImageButton
+                  android:background="@android:color/transparent"
+                  android:src="@drawable/ic_call"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="20dp"
+                  android:scaleType="fitXY"
+                  android:id="@+id/btnCall"
+                  android:layout_width="24dp"
+                  android:layout_height="24dp">
+
+              </ImageButton>
+              <TextView
+                  android:layout_marginTop="16dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="35dp"
+                  android:text="(786) 713-8616"
+                  android:layout_toEndOf="@id/btnCall"
+                  android:layout_marginLeft="20dp"
+                  android:gravity="center|left"
+                  android:fontFamily="@font/tenor_sans"
+                  android:textFontWeight="400"
+                  android:textSize="16sp"
+                  android:textColor="#555555"
+                  >
+
+              </TextView>
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_below="@id/relativeCall"
+               android:id="@+id/relativeLocation"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+              <ImageButton
+                  android:background="@android:color/transparent"
+                  android:src="@drawable/ic_location"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="20dp"
+                  android:scaleType="fitXY"
+                  android:id="@+id/btnLocation"
+                  android:layout_width="24dp"
+                  android:layout_height="24dp">
+
+              </ImageButton>
+              <TextView
+                  android:layout_marginTop="16dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="35dp"
+                  android:text="Store locator"
+                  android:layout_toEndOf="@id/btnLocation"
+                  android:layout_marginLeft="20dp"
+                  android:gravity="center|left"
+                  android:fontFamily="@font/tenor_sans"
+                  android:textFontWeight="400"
+                  android:textSize="16sp"
+                  android:textColor="#555555"
+                  >
+
+              </TextView>
+           </RelativeLayout>
+           <ImageView
+               android:layout_below="@id/btnLocation"
+               android:layout_width="125dp"
+               android:src="@drawable/line_bottom_menu"
+               android:scaleType="fitXY"
+               android:layout_marginTop="27dp"
+               android:layout_gravity="center"
+               android:layout_height="10dp">
+
+           </ImageView>
+           <RelativeLayout
+               android:layout_marginTop="27dp"
+               android:layout_gravity="center"
+               android:layout_width="142dp"
+               android:layout_height="24dp">
+              <ImageView
+                  android:layout_alignParentLeft="true"
+                  android:layout_width="24dp"
+                  android:src="@drawable/ic_twitter"
+                  android:scaleType="fitXY"
+                  android:layout_height="24dp">
+              </ImageView>
+              <ImageView
+                  android:layout_centerHorizontal="true"
+                  android:layout_width="24dp"
+                  android:src="@drawable/ic_instagram"
+                  android:scaleType="fitXY"
+                  android:layout_height="24dp">
+              </ImageView>
+              <ImageView
+                  android:layout_alignParentRight="true"
+                  android:layout_width="24dp"
+                  android:src="@drawable/ic_youtube"
+                  android:scaleType="fitXY"
+                  android:layout_height="24dp">
+              </ImageView>
+           </RelativeLayout>
+        </LinearLayout>
+     </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>
