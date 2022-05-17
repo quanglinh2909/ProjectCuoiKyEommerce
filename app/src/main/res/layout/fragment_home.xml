@@ -4,55 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
 
-      <FrameLayout
-          android:layout_width="match_parent"
-          android:layout_height="600dp">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
 
-          <androidx.viewpager.widget.ViewPager
-              android:id="@+id/viewPagerBanner"
-              android:layout_width="match_parent"
-              android:layout_height="600dp">
+            </androidx.viewpager.widget.ViewPager>
+            <me.relex.circleindicator.CircleIndicator
+                android:layout_width="300dp"
+                android:layout_gravity="bottom|center"
+                android:id="@+id/circleIndicatorBanner"
+                android:layout_height="50dp">
 
-          </androidx.viewpager.widget.ViewPager>
-          <me.relex.circleindicator.CircleIndicator
-              android:layout_width="300dp"
-              android:layout_gravity="bottom|center"
-              android:id="@+id/circleIndicatorBanner"
-              android:layout_height="50dp">
+            </me.relex.circleindicator.CircleIndicator>
 
-          </me.relex.circleindicator.CircleIndicator>
-
-      </FrameLayout>
-      <TextView
-          android:id="@+id/new_arrival"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="NEW ARRIVAL"
-          android:layout_gravity="center"
-          android:fontFamily="monospace"
-          android:layout_marginTop="10dp"
-          />
-      <ImageView
-          android:id="@+id/underline"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:src="@drawable/under_line"
-          android:layout_gravity="center"/>
-      <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/list_item_product"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginLeft="8dp"
-          android:layout_marginRight="8dp"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/new_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW ARRIVAL"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:layout_marginTop="35dp"
+            />
+        <ImageView
+            android:id="@+id/underline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/under_line"
+            android:layout_gravity="center"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_item_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="-2dp"/>
 
 
-  </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
 
 </FrameLayout>

@@ -1,5 +1,6 @@
 package com.example.projectcuoikyeommerce.component;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,9 @@ import com.example.projectcuoikyeommerce.model.TagParent;
 import java.util.List;
 import java.util.Map;
 
-public class ExpandableMenuAdapter extends BaseExpandableListAdapter  {
+public class ExpandableMenuAdapter extends BaseExpandableListAdapter {
     private List<TagParent> mListGroup;
-    private Map<TagParent,List<TagChild>> mListItem;
+    private Map<TagParent, List<TagChild>> mListItem;
 
     public ExpandableMenuAdapter(List<TagParent> mListGroup, Map<TagParent, List<TagChild>> mListItem) {
         this.mListGroup = mListGroup;
@@ -25,13 +26,21 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter  {
 
     @Override
     public int getGroupCount() {
-        if(mListGroup != null) return mListGroup.size();
+        if (mListGroup != null) return mListGroup.size();
         return 0;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        if(mListGroup != null && mListItem != null) return  mListItem.get(mListGroup.get(groupPosition)).size();
+        Log.d("AAA", "getChildrenCount: " + groupPosition);
+        if (mListGroup != null && mListItem != null) {
+            if (mListItem.containsKey(mListGroup.get(groupPosition))) {
+                return mListItem.get(mListGroup.get(groupPosition)).size();
+            } else {
+                return 0;
+            }
+
+        }
         return 0;
     }
 
@@ -48,13 +57,13 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter  {
     @Override
     public long getGroupId(int groupPosition) {
         TagParent tagParent = mListGroup.get(groupPosition);
-        return tagParent.getIdNumber();
+        return tagParent.getId();
     }
 
     @Override
     public long getChildId(int groupPosition, int childPosition) {
         TagChild tagChild = mListItem.get(mListGroup.get(groupPosition)).get(childPosition);
-        return tagChild.getIdNumber();
+        return tagChild.getId();
     }
 
     @Override
@@ -64,19 +73,19 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter  {
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-       if(convertView == null){
-           convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_group,parent,false);
-       }
+        if (convertView == null) {
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_group, parent, false);
+        }
 
-       TextView textView = convertView.findViewById(R.id.txtItemMenuGroup);
-       TagParent tagParent = mListGroup.get(groupPosition);
-       textView.setText(tagParent.getName());
+        TextView textView = convertView.findViewById(R.id.txtItemMenuGroup);
+        TagParent tagParent = mListGroup.get(groupPosition);
+        textView.setText(tagParent.getName());
 
         ImageView imageView = convertView.findViewById(R.id.imgDropAndUp);
-        if(isExpanded){
-            imageView.setImageResource((R.drawable.ic_baseline_keyboard_arrow_up_24));
-        }else{
-            imageView.setImageResource((R.drawable.ic_baseline_keyboard_arrow_down_24));
+        if (isExpanded) {
+            imageView.setImageResource((R.drawable.ic_back));
+        } else {
+            imageView.setImageResource((R.drawable.ic_forward));
 
         }
 
@@ -85,8 +94,8 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter  {
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        if(convertView == null){
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_chilren,parent,false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_chilren, parent, false);
         }
         TextView textView = convertView.findViewById(R.id.txtItemMenuChirent);
         TagChild tagChild = mListItem.get(mListGroup.get(groupPosition)).get(childPosition);
