@@ -1,6 +1,5 @@
-package com.example.projectcuoikyeommerce.adapter;
+package com.example.projectcuoikyeommerce.adapter.home;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
-import com.example.projectcuoikyeommerce.model.Branch;
-import com.example.projectcuoikyeommerce.model.Collection;
 import com.example.projectcuoikyeommerce.model.Product;
-import com.example.projectcuoikyeommerce.model.TagChild;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> {
