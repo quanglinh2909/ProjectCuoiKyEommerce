@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,37 @@ public class HomeFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_home, container, false);
         initUi();
         initBanner();
+
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if(viewPagerBanner.getCurrentItem() == getListBanner().size()-1 ){
+                    viewPagerBanner.setCurrentItem(0);
+                }else {
+                    viewPagerBanner.setCurrentItem(viewPagerBanner.getCurrentItem()+1);
+                }
+            }
+        };
+        handler.postDelayed(runnable,3000);
+        viewPagerBanner.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+              handler.removeCallbacks(runnable);
+                handler.postDelayed(runnable,3000);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         return mView;
     }
     private void initUi() {
@@ -120,10 +152,11 @@ public class HomeFragment extends Fragment {
     }
     private List<Banner> getListBanner() {
         List<Banner> bannerList = new ArrayList<>();
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
-        bannerList.add(new Banner("",""));
+        bannerList.add(new Banner(R.drawable.item_banner_2,""));
+        bannerList.add(new Banner(R.drawable.item_banner_1,""));
+        bannerList.add(new Banner(R.drawable.item_banner_2,""));
+        bannerList.add(new Banner(R.drawable.item_banner_1,""));
+
         return bannerList;
     }
 }

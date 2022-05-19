@@ -1,19 +1,19 @@
 package com.example.projectcuoikyeommerce.model;
 
 public class Banner {
-    private String url;
+    private int url;
     private String description;
 
-    public Banner(String url, String description) {
+    public Banner(int url, String description) {
         this.url = url;
         this.description = description;
     }
 
-    public String getUrl() {
+    public int getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(int url) {
         this.url = url;
     }
 
