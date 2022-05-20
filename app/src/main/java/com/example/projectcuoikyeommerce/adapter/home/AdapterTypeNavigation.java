@@ -1,4 +1,4 @@
-package com.example.projectcuoikyeommerce.adapter;
+package com.example.projectcuoikyeommerce.adapter.home;
 
 import android.graphics.Typeface;
 import android.view.LayoutInflater;

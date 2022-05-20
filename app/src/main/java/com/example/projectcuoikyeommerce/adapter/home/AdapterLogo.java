@@ -1,11 +1,6 @@
-package com.example.projectcuoikyeommerce.adapter;
+package com.example.projectcuoikyeommerce.adapter.home;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,21 +10,26 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.event.home.BranchAction;
 
 import java.util.List;
 
 public class AdapterLogo extends RecyclerView.Adapter<ViewHolderLogo> {
     List<String> logos;
     Context context;
-    public AdapterLogo(List<String> logos,Context context){
-        this.logos=logos;
-        this.context=context;
+    BranchAction branchAction;
+
+    public AdapterLogo(List<String> logos, Context context, BranchAction branchAction) {
+        this.logos = logos;
+        this.context = context;
+        this.branchAction = branchAction;
     }
+
     @NonNull
     @Override
     public ViewHolderLogo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.logo,parent,false);
-        ViewHolderLogo viewHolder=new ViewHolderLogo(view).linkAdapter(this);
+        ViewHolderLogo viewHolder=new ViewHolderLogo(view);
         return viewHolder;
     }
 
@@ -53,8 +53,5 @@ class ViewHolderLogo extends RecyclerView.ViewHolder{
         super(itemView);
         logoImage=itemView.findViewById(R.id.logo_image);
     }
-    public ViewHolderLogo linkAdapter(AdapterLogo adapter){
-        this.adapter=adapter;
-        return this;
-    }
+
 }

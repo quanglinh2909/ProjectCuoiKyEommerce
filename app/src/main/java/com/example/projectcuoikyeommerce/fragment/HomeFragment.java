@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,11 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.projectcuoikyeommerce.R;
-import com.example.projectcuoikyeommerce.adapter.AdapterBannerHome;
-import com.example.projectcuoikyeommerce.adapter.AdapterLogo;
-import com.example.projectcuoikyeommerce.adapter.AdapterProductHome;
-import com.example.projectcuoikyeommerce.adapter.AdapterTypeNavigation;
+import com.example.projectcuoikyeommerce.adapter.home.AdapterBannerHome;
+import com.example.projectcuoikyeommerce.adapter.home.AdapterLogo;
+import com.example.projectcuoikyeommerce.adapter.home.AdapterProductHome;
+import com.example.projectcuoikyeommerce.adapter.home.AdapterTypeNavigation;
 import com.example.projectcuoikyeommerce.component.ItemNavigation;
+import com.example.projectcuoikyeommerce.event.home.BranchAction;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.Branch;
 import com.example.projectcuoikyeommerce.model.Collection;
@@ -31,7 +31,7 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements BranchAction {
     private ViewPager viewPagerBanner;
     private CircleIndicator circleIndicatorBanner;
     private AdapterBannerHome adapterBannerHome;
@@ -115,7 +115,7 @@ public class HomeFragment extends Fragment {
         adapterTypeNavigation=new AdapterTypeNavigation(initNavigation());
         listNavigation.setLayoutManager(new GridLayoutManager(mView.getContext(),adapterTypeNavigation.getItemCount()));
         listNavigation.setAdapter(adapterTypeNavigation);
-        adapterLogo=new AdapterLogo(initLogo(),mView.getContext());
+        adapterLogo=new AdapterLogo(initLogo(),mView.getContext(),this);
         listLogo.setLayoutManager(new GridLayoutManager(mView.getContext(),3));
         listLogo.setAdapter(adapterLogo);
 

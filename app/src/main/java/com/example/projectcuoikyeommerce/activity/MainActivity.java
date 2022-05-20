@@ -1,47 +1,24 @@
 package com.example.projectcuoikyeommerce.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.projectcuoikyeommerce.R;
-import com.example.projectcuoikyeommerce.adapter.AdapterBannerHome;
-import com.example.projectcuoikyeommerce.api.TagParentController;
-import com.example.projectcuoikyeommerce.api.config.ApiUtils;
-import com.example.projectcuoikyeommerce.api.config.ConfigRetrofit;
 import com.example.projectcuoikyeommerce.component.MenuBottomSheet;
 import com.example.projectcuoikyeommerce.constant.FragmentID;
 import com.example.projectcuoikyeommerce.event.MenuEvent;
 import com.example.projectcuoikyeommerce.fragment.CategoryFragment;
 import com.example.projectcuoikyeommerce.fragment.HomeFragment;
-import com.example.projectcuoikyeommerce.model.Banner;
-import com.example.projectcuoikyeommerce.model.TagChild;
-import com.example.projectcuoikyeommerce.model.TagParent;
-import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import me.relex.circleindicator.CircleIndicator;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements MenuEvent {
    private int currentFragment = FragmentID.FRAGMENT_HOME;
