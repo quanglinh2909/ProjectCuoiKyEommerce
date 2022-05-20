@@ -2,10 +2,10 @@ package com.example.projectcuoikyeommerce.model;
 
 public class Image {
     private Product product;
-    private String urlImage;
+    private int urlImage;
     private String alt;
 
-    public Image(Product product, String urlImage, String alt) {
+    public Image(Product product, int urlImage, String alt) {
         this.product = product;
         this.urlImage = urlImage;
         this.alt = alt;
@@ -19,11 +19,11 @@ public class Image {
         this.product = product;
     }
 
-    public String getUrlImage() {
+    public int getUrlImage() {
         return urlImage;
     }
 
-    public void setUrlImage(String urlImage) {
+    public void setUrlImage(int urlImage) {
         this.urlImage = urlImage;
     }
 

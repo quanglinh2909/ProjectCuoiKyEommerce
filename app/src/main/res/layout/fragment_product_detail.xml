@@ -5,10 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ProductDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="600dp">
+
+           <androidx.viewpager.widget.ViewPager
+               android:id="@+id/viewPagerDetail"
+               android:layout_width="match_parent"
+               android:layout_height="600dp">
+
+           </androidx.viewpager.widget.ViewPager>
+           <me.relex.circleindicator.CircleIndicator
+               android:layout_width="300dp"
+               android:layout_gravity="bottom|center"
+               android:id="@+id/circleIndicatorDetail"
+               android:layout_height="50dp">
+
+           </me.relex.circleindicator.CircleIndicator>
+
+       </FrameLayout>
+   </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
