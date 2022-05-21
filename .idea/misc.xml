@@ -3,19 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/drawable/edit_text.xml" value="0.164" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main.xml" value="0.1718683197947841" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_check_out.xml" value="0.209375" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/header.xml" value="0.1718683197947841" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/item_banner_home.xml" value="0.209375" />
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/activity_main.xml" value="0.12685185185185185" />
-<<<<<<< HEAD
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/header.xml" value="0.25416666666666665" />
-=======
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/header.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/item_product.xml" value="0.1" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/item_type_menu.xml" value="0.1" />
         <entry key="..\:/AndroidProject/GitAndroid/app/src/main/res/layout/logo.xml" value="0.1537037037037037" />
 =======
 >>>>>>> a054c675c54fba32b666f6e60fd093831201f5fa
 >>>>>>> e4c010923e0d9f4db1c0cbd956c23ec4e6f83a9e
+=======
+>>>>>>> e896b6a4f2de65b1bed43f768d8568446a6b62fa
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/drawable/header.xml" value="0.1805" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_add_new_address.xml" value="0.20416666666666666" />

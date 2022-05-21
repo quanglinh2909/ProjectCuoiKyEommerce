@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">ProjectCuoiKyEommerce</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_app">Open fashion</string>
+    <string name="title">Sign in</string>
+    <string name="hello_blank_fragment">Email</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="create_account">Don’t have an account? Create Account</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_pass">Forgot Password?</string>
+
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_create_account">Create Account</string>
+    <string name="dic_signup">Already a account? Log in</string>
+    <string name="prompt_name">Name</string>
+
 </resources>
