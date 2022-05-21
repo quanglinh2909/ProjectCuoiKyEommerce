@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
-        android:id="@+id/imgItemBanner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/imgItemBanner"
         android:scaleType="fitXY"
+        android:src="@drawable/banner_item1"
+        />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="43dp"-->
+<!--        android:layout_marginTop="231dp"-->
+<!--        android:fontFamily="@font/tenor_sans"-->
+<!--        android:text="Luxury"-->
+<!--        android:textColor="#B3333333"-->
+<!--        android:textFontWeight="700"-->
+<!--        android:textSize="40sp">-->
+
+<!--    </TextView>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="Fashion"-->
+<!--        android:fontFamily="@font/tenor_sans"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textColor="#B3333333"-->
+<!--        android:layout_marginTop="269dp"-->
+<!--        android:layout_marginLeft="60dp"-->
+<!--        android:textFontWeight="700"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--    </TextView>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="&amp;Accessories"-->
+<!--        android:fontFamily="@font/tenor_sans"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textColor="#B3333333"-->
+<!--        android:layout_marginTop="317dp"-->
+<!--        android:layout_marginLeft="36dp"-->
+<!--        android:textFontWeight="700"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--    </TextView>-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/text_baner"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="36dp"
+        android:layout_height="wrap_content">
+
+    </ImageView>
 
 
-        android:src="@drawable/banner_item1" />
-</LinearLayout>
+</FrameLayout>

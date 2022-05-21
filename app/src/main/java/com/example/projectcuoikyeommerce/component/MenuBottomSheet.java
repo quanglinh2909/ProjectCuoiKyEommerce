@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.api.config.ApiUtils;
+import com.example.projectcuoikyeommerce.event.MenuEvent;
 import com.example.projectcuoikyeommerce.model.TagChild;
 import com.example.projectcuoikyeommerce.model.TagParent;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -36,6 +37,11 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
     private View view;
     private ImageButton btnCloseMenu;
     private BottomSheetDialog bottomSheetDialog;
+    private MenuEvent menuEvent;
+
+    public MenuBottomSheet(MenuEvent menuEvent) {
+        this.menuEvent = menuEvent;
+    }
 
     @NonNull
     @Override
@@ -71,6 +77,7 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
     private Map<TagParent, List<TagChild>> getmListItem() {
         Map<TagParent, List<TagChild>> tagParentListMap = new HashMap<>();
 
+
         ApiUtils.getDataTagChild().getListTagChild().enqueue(new Callback<List<TagChild>>() {
             @Override
             public void onResponse(Call<List<TagChild>> call, Response<List<TagChild>> response) {
@@ -93,7 +100,7 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
                     @Override
                     public void onResponse(Call<List<TagParent>> call, Response<List<TagParent>> response) {
                         parentList = response.body();
-                        expandableMenuAdapter = new ExpandableMenuAdapter(parentList, mListItem);
+                        expandableMenuAdapter = new ExpandableMenuAdapter(parentList, mListItem,menuEvent);
                         expandableListViewMenu.setAdapter(expandableMenuAdapter);
                     }
 
@@ -111,6 +118,15 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
 
             }
         });
+        List<TagChild> tagChildList = new ArrayList<>();
+        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
+        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
+        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
+        tagParentListMap.put(new TagParent(1,"category"),tagChildList);
+        parentList = new ArrayList<>();
+        parentList.add(new TagParent(1,"category"));
+        expandableMenuAdapter = new ExpandableMenuAdapter(parentList, tagParentListMap,menuEvent);
+        expandableListViewMenu.setAdapter(expandableMenuAdapter);
 
         return tagParentListMap;
 

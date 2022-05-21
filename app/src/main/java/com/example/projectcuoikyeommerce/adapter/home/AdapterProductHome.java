@@ -1,6 +1,5 @@
-package com.example.projectcuoikyeommerce.adapter;
+package com.example.projectcuoikyeommerce.adapter.home;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
-import com.example.projectcuoikyeommerce.model.Branch;
-import com.example.projectcuoikyeommerce.model.Collection;
 import com.example.projectcuoikyeommerce.model.Product;
-import com.example.projectcuoikyeommerce.model.TagChild;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> {
@@ -34,11 +29,10 @@ public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderProduct holder, int position) {
-        Log.d("Object",holder.toString());
         Product product=listProduct.get(position);
-        Log.d("Object",product.toString());
-        holder.titleProductView.setText(product.getName());
-        holder.priceProductView.setText(product.getPrice()+"");
+//        holder.titleProductView.setText(product.getName());
+//        holder.branchProductView.setText(product.getBranch().getName());
+//        holder.priceProductView.setText(product.getPrice()+"");
 
     }
 
@@ -51,13 +45,16 @@ class ViewHolderProduct extends RecyclerView.ViewHolder{
     AdapterProductHome adapter;
     ImageView imageProductView;
     TextView titleProductView;
+    TextView branchProductView;
     TextView priceProductView;
 
     public ViewHolderProduct(@NonNull View itemView) {
         super(itemView);
         imageProductView=itemView.findViewById(R.id.item_product_image);
         titleProductView=itemView.findViewById(R.id.item_product_name);
+        branchProductView=itemView.findViewById(R.id.item_product_branch);
         priceProductView=itemView.findViewById(R.id.item_product_price);
+
     }
     public ViewHolderProduct linkAdapter(AdapterProductHome adapter){
         this.adapter=adapter;

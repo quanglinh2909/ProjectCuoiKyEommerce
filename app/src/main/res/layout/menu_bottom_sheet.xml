@@ -156,13 +156,13 @@
                android:layout_gravity="center"
                android:layout_width="142dp"
                android:layout_height="24dp">
-              <ImageView
-                  android:layout_alignParentLeft="true"
-                  android:layout_width="24dp"
-                  android:src="@drawable/ic_twitter"
-                  android:scaleType="fitXY"
-                  android:layout_height="24dp">
-              </ImageView>
+
+               <ImageView
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:layout_alignParentLeft="true"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/ic_twitter"></ImageView>
               <ImageView
                   android:layout_centerHorizontal="true"
                   android:layout_width="24dp"
