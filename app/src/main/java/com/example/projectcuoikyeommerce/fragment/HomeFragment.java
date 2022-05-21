@@ -1,5 +1,6 @@
 package com.example.projectcuoikyeommerce.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,12 +14,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.activity.MainActivity;
 import com.example.projectcuoikyeommerce.adapter.home.AdapterBannerHome;
 import com.example.projectcuoikyeommerce.adapter.home.AdapterLogo;
 import com.example.projectcuoikyeommerce.adapter.home.AdapterProductHome;
 import com.example.projectcuoikyeommerce.adapter.home.AdapterTypeNavigation;
 import com.example.projectcuoikyeommerce.component.ItemNavigation;
 import com.example.projectcuoikyeommerce.event.home.BranchAction;
+import com.example.projectcuoikyeommerce.event.home.ProductHomeEvent;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.Branch;
 import com.example.projectcuoikyeommerce.model.Collection;
@@ -41,14 +44,15 @@ public class HomeFragment extends Fragment implements BranchAction {
     private AdapterTypeNavigation adapterTypeNavigation;
     private AdapterLogo adapterLogo;
     private RecyclerView listLogo;
+    private ProductHomeEvent homeEvent;
 
-    public HomeFragment() {
-        // Required empty public constructor
+    public HomeFragment(ProductHomeEvent homeEvent) {
+       this.homeEvent = homeEvent;
     }
 
 
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static HomeFragment newInstance(String param1, String param2, MainActivity mainActivity) {
+        HomeFragment fragment = new HomeFragment(mainActivity);
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -111,7 +115,7 @@ public class HomeFragment extends Fragment implements BranchAction {
         circleIndicatorBanner.setViewPager(viewPagerBanner);
         adapterBannerHome.registerDataSetObserver(circleIndicatorBanner.getDataSetObserver());
         listProduct.setLayoutManager(new GridLayoutManager(mView.getContext(),2));
-        listProduct.setAdapter(new AdapterProductHome(initProducts()));
+        listProduct.setAdapter(new AdapterProductHome(initProducts(),homeEvent));
         adapterTypeNavigation=new AdapterTypeNavigation(initNavigation());
         listNavigation.setLayoutManager(new GridLayoutManager(mView.getContext(),adapterTypeNavigation.getItemCount()));
         listNavigation.setAdapter(adapterTypeNavigation);

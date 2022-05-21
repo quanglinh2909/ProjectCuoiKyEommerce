@@ -5,28 +5,129 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ProductDetailFragment">
 
-   <androidx.core.widget.NestedScrollView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-       <FrameLayout
-           android:layout_width="match_parent"
-           android:layout_height="600dp">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-           <androidx.viewpager.widget.ViewPager
-               android:id="@+id/viewPagerDetail"
-               android:layout_width="match_parent"
-               android:layout_height="600dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-           </androidx.viewpager.widget.ViewPager>
-           <me.relex.circleindicator.CircleIndicator
-               android:layout_width="300dp"
-               android:layout_gravity="bottom|center"
-               android:id="@+id/circleIndicatorDetail"
-               android:layout_height="50dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="510dp">
 
-           </me.relex.circleindicator.CircleIndicator>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="510dp">
 
-       </FrameLayout>
-   </androidx.core.widget.NestedScrollView>
+                </androidx.viewpager.widget.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circleIndicatorDetail"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center">
+
+                </me.relex.circleindicator.CircleIndicator>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/txtNameProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/tenor_sans"
+                        android:text="MOHAN"
+                        android:textColor="#000000"
+                        android:textFontWeight="400"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:id="@+id/btnExport"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_export">
+
+                    </ImageButton>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDecriptionProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="Recycle Boucle Knit Cardigan Pink"
+                    android:textColor="#000000"
+                    android:textFontWeight="400"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtPriceProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="$12"
+                    android:textColor="#DD8560"
+                    android:textFontWeight="400"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="#000000">
+
+                <ImageButton
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_group_206"
+                    >
+
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_heart"
+                    android:layout_marginRight="25dp"
+                    >
+
+                </ImageButton>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

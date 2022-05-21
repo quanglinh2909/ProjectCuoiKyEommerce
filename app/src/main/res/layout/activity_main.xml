@@ -43,12 +43,12 @@
           android:src="@drawable/ic_search" />
 
       <ImageButton
+          android:id="@+id/btnShoppingBag"
           android:layout_width="24dp"
           android:layout_height="24dp"
           android:layout_alignParentEnd="true"
-          android:layout_marginEnd="30dp"
           android:layout_marginTop="24dp"
-          android:id="@+id/btnShoppingBag"
+          android:layout_marginEnd="30dp"
           android:background="@android:color/transparent"
           android:src="@drawable/ic_shopping_bag" />
 

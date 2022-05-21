@@ -27,13 +27,13 @@ public class AdapterImageDetail extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_banner_home,container,false);
-        ImageView imageItemBanner = view.findViewById(R.id.imgItemBanner);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_slide_image_detail,container,false);
+        ImageView imageItem = view.findViewById(R.id.imgItemSlide);
         Image image = mListBanners.get(position);
         if(image != null){
 //            Glide.with(mContext).load(Uri.parse(URL.BASE_URL+"images/Banner.jpg")).into(imageItemBanner);
 //            Glide.with(view.getContext()).load(URL.BASE_URL+"images/Banner.jpg").placeholder(R.drawable.banner_item1).dontAnimate().into(imageItemBanner);
-            imageItemBanner.setImageResource(mListBanners.get(position).getUrlImage());
+            imageItem.setImageResource(mListBanners.get(position).getUrlImage());
         }
 
         container.addView(view);

@@ -10,15 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.event.home.ProductHomeEvent;
 import com.example.projectcuoikyeommerce.model.Product;
 
 import java.util.List;
 
 public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> {
-    List<Product> listProduct;
-    public AdapterProductHome(List<Product> listProduct){
-        this.listProduct=listProduct;
+    private List<Product> listProduct;
+    private ProductHomeEvent productHomeEvent;
+
+    public AdapterProductHome(List<Product> listProduct, ProductHomeEvent productHomeEvent) {
+        this.listProduct = listProduct;
+        this.productHomeEvent = productHomeEvent;
     }
+
     @NonNull
     @Override
     public ViewHolderProduct onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,6 +38,12 @@ public class AdapterProductHome extends RecyclerView.Adapter<ViewHolderProduct> 
 //        holder.titleProductView.setText(product.getName());
 //        holder.branchProductView.setText(product.getBranch().getName());
 //        holder.priceProductView.setText(product.getPrice()+"");
+        holder.imageProductView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                productHomeEvent.onClickItem();
+            }
+        });
 
     }
 
