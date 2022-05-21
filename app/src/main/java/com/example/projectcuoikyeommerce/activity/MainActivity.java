@@ -17,12 +17,15 @@ import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.component.MenuBottomSheet;
 import com.example.projectcuoikyeommerce.constant.FragmentID;
 import com.example.projectcuoikyeommerce.event.MenuEvent;
+import com.example.projectcuoikyeommerce.event.home.ProductHomeEvent;
+import com.example.projectcuoikyeommerce.fragment.CartFragment;
 import com.example.projectcuoikyeommerce.fragment.CategoryFragment;
 import com.example.projectcuoikyeommerce.fragment.HomeFragment;
+import com.example.projectcuoikyeommerce.fragment.ProductDetailFragment;
 
-public class MainActivity extends AppCompatActivity implements MenuEvent {
+public class MainActivity extends AppCompatActivity implements MenuEvent, ProductHomeEvent {
    private int currentFragment = FragmentID.FRAGMENT_HOME;
-   private ImageButton btnMenu;
+   private ImageButton btnMenu,btnShoppingBag;
     private MenuBottomSheet menuBottomSheet;
     private ImageView btnBackHome;
     private RelativeLayout header;
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent {
 
         initUi();
         handleAction();
-        replaceFragment(new HomeFragment());
+        replaceFragment(new HomeFragment(MainActivity.this));
 //        replaceFragment(new CategoryFragment());
 
         menuBottomSheet = new MenuBottomSheet(MainActivity.this);
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent {
         btnMenu = findViewById(R.id.btnMenu);
         btnBackHome = findViewById(R.id.btnBackHome);
         header = findViewById(R.id.header);
+        btnShoppingBag = findViewById(R.id.btnShoppingBag);
     }
     private void handleAction() {
         btnMenu.setOnClickListener(new View.OnClickListener() {
@@ -63,11 +67,21 @@ public class MainActivity extends AppCompatActivity implements MenuEvent {
             @Override
             public void onClick(View v) {
                 if(currentFragment != FragmentID.FRAGMENT_HOME){
-                    replaceFragment(new HomeFragment());
+                    replaceFragment(new HomeFragment(MainActivity.this));
                     currentFragment = FragmentID.FRAGMENT_HOME;
                     header.setBackgroundResource(R.drawable.header);
                 }
 
+            }
+        });
+        btnShoppingBag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(currentFragment != FragmentID.FRAGMENT_CARD){
+                    replaceFragment(new CartFragment());
+                    currentFragment = FragmentID.FRAGMENT_CARD;
+                    header.setBackgroundResource(R.drawable.header);
+                }
             }
         });
     }
@@ -85,6 +99,14 @@ public class MainActivity extends AppCompatActivity implements MenuEvent {
         replaceFragment(new CategoryFragment());
         currentFragment = FragmentID.FRAGMENT_CATEGORY;
         menuBottomSheet.dismiss();
+        header.setBackgroundColor(getResources().getColor(R.color.white));
+
+    }
+
+    @Override
+    public void onClickItem() {
+        replaceFragment(new ProductDetailFragment());
+        currentFragment = FragmentID.FRAGMENT_PRODUCT_DETAIL;
         header.setBackgroundColor(getResources().getColor(R.color.white));
 
     }

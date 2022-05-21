@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.projectcuoikyeommerce.R;
-import com.example.projectcuoikyeommerce.adapter.AdapterBannerHome;
 import com.example.projectcuoikyeommerce.adapter.product_detail.AdapterImageDetail;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.Image;
@@ -73,9 +72,7 @@ public class ProductDetailFragment extends Fragment {
     }
     private List<Image> getListBanner() {
         List<Image> bannerList = new ArrayList<>();
-        bannerList.add(new Image(null,R.drawable.item_banner_2,""));
         bannerList.add(new Image(null,R.drawable.item_banner_1,""));
-        bannerList.add(new Image(null,R.drawable.item_banner_2,""));
         bannerList.add(new Image(null,R.drawable.item_banner_1,""));
 
         return bannerList;
