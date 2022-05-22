@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_height="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MATERIALS"
+        android:textColor="#000000"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:fontFamily="@font/tenor_sans"
+        android:lineHeight="24dp"
+        >
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We work with monitoring programmes to ensure compliance with safety, health and quality standards for our products. "
+        android:textColor="#000000"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+        android:fontFamily="@font/tenor_sans"
+        android:lineHeight="24dp"
+
+        >
+
+    </TextView>
+</LinearLayout>
