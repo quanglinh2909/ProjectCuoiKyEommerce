@@ -2,7 +2,6 @@ package com.example.projectcuoikyeommerce.component;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -78,7 +77,7 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
         Map<TagParent, List<TagChild>> tagParentListMap = new HashMap<>();
 
 
-        ApiUtils.getDataTagChild().getListTagChild().enqueue(new Callback<List<TagChild>>() {
+        ApiUtils.tagChild().getListTagChild().enqueue(new Callback<List<TagChild>>() {
             @Override
             public void onResponse(Call<List<TagChild>> call, Response<List<TagChild>> response) {
 
@@ -96,7 +95,7 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
                     }
                 }
                 mListItem = tagParentListMap;
-                ApiUtils.getDataTagParent().listTagParent().enqueue(new Callback<List<TagParent>>() {
+                ApiUtils.tagParent().listTagParent().enqueue(new Callback<List<TagParent>>() {
                     @Override
                     public void onResponse(Call<List<TagParent>> call, Response<List<TagParent>> response) {
                         parentList = response.body();

@@ -36,8 +36,8 @@ public class AdapterBannerHome extends PagerAdapter {
         Banner banner = mListBanners.get(position);
         if(banner != null){
 //            Glide.with(mContext).load(Uri.parse(URL.BASE_URL+"images/Banner.jpg")).into(imageItemBanner);
-//            Glide.with(view.getContext()).load(URL.BASE_URL+"images/Banner.jpg").placeholder(R.drawable.banner_item1).dontAnimate().into(imageItemBanner);
-            imageItemBanner.setImageResource(mListBanners.get(position).getUrl());
+            Glide.with(view.getContext()).load(URL.BASE_URL+banner.getLinkImage()).placeholder(R.drawable.banner_item1).dontAnimate().into(imageItemBanner);
+//            imageItemBanner.setImageResource(mListBanners.get(position).getUrl());
         }
 
         container.addView(view);

@@ -1,0 +1,54 @@
+package com.example.projectcuoikyeommerce.presenter;
+
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.example.projectcuoikyeommerce.api.config.ApiUtils;
+import com.example.projectcuoikyeommerce.model.Banner;
+import com.example.projectcuoikyeommerce.model.TagParent;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+public class FragmentHomePresenter {
+    String TAG = "AAA";
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<Banner> getListBanner() {
+        List<Banner> bannerList = new ArrayList<>();
+        try {
+            CompletableFuture<List<Banner>> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.banner().getListBanner().execute().body();
+                } catch (IOException e) {
+                    return bannerList;
+                }
+            });
+
+            return  future.get();
+        } catch (Exception e) {
+            return  bannerList;
+        }
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<TagParent> getListTagParent() {
+        List<TagParent> tagParents = new ArrayList<>();
+        try {
+            CompletableFuture<List<TagParent>> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.tagParent().listTagParent().execute().body();
+                } catch (IOException e) {
+                    return tagParents;
+                }
+            });
+
+            return  future.get();
+        } catch (Exception e) {
+            return  tagParents;
+        }
+    }
+
+}

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,74 +7,92 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-   <RelativeLayout
-       android:id="@+id/header"
+  <LinearLayout
+      android:layout_alignParentTop="true"
+      android:layout_above="@id/nav_view"
+      android:orientation="vertical"
+      android:id="@+id/line1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <RelativeLayout
+          android:id="@+id/header"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@drawable/header"
+          android:clipToOutline="true">
+          <ImageButton
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:id="@+id/btnMenu"
+              android:src="@drawable/ic_menu"
+              android:layout_marginTop="22dp"
+              android:layout_marginLeft="16dp"
+              android:background="@android:color/transparent"
+              />
+
+          <ImageView
+              android:id="@+id/btnBackHome"
+              android:layout_width="78dp"
+              android:layout_height="32dp"
+              android:layout_centerInParent="true"
+              android:src="@drawable/logo" />
+
+          <ImageButton
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginTop="24dp"
+              android:layout_marginEnd="16dp"
+              android:layout_toStartOf="@+id/btnShoppingBag"
+              android:background="@android:color/transparent"
+              android:src="@drawable/ic_search" />
+
+          <ImageButton
+              android:id="@+id/btnShoppingBag"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_alignParentEnd="true"
+              android:layout_marginTop="24dp"
+              android:layout_marginEnd="30dp"
+              android:background="@android:color/transparent"
+              android:src="@drawable/ic_shopping_bag" />
+
+
+      </RelativeLayout>
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+              <RelativeLayout
+                  android:id="@+id/containerFragment"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+              </RelativeLayout>
+              <include layout="@layout/footer"
+                  android:layout_below="@id/containerFragment"
+                  android:layout_height="340dp"
+                  android:id="@+id/footer"
+                  android:layout_width="match_parent">
+              </include>
+          </RelativeLayout>
+
+
+
+      </ScrollView>
+
+  </LinearLayout>
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/nav_view"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:layout_alignParentLeft="true"
-       android:layout_alignParentTop="true"
-       android:background="@drawable/header"
-       android:clipToOutline="true">
-      <ImageButton
-          android:layout_width="24dp"
-          android:layout_height="24dp"
-          android:id="@+id/btnMenu"
-          android:src="@drawable/ic_menu"
-          android:layout_marginTop="22dp"
-          android:layout_marginLeft="16dp"
-          android:background="@android:color/transparent"
-          />
+       android:layout_alignParentBottom="true"
+       app:itemTextColor="@color/bottom_nav_color"
+       app:itemIconTint="@color/bottom_nav_color"
+       android:background="?android:attr/windowBackground"
+       app:menu="@menu/bottom_nav_menu" />
 
-      <ImageView
-          android:id="@+id/btnBackHome"
-          android:layout_width="78dp"
-          android:layout_height="32dp"
-          android:layout_centerInParent="true"
-          android:src="@drawable/logo" />
-
-      <ImageButton
-          android:layout_width="24dp"
-          android:layout_height="24dp"
-          android:layout_marginTop="24dp"
-          android:layout_marginEnd="16dp"
-          android:layout_toStartOf="@+id/btnShoppingBag"
-          android:background="@android:color/transparent"
-          android:src="@drawable/ic_search" />
-
-      <ImageButton
-          android:id="@+id/btnShoppingBag"
-          android:layout_width="24dp"
-          android:layout_height="24dp"
-          android:layout_alignParentEnd="true"
-          android:layout_marginTop="24dp"
-          android:layout_marginEnd="30dp"
-          android:background="@android:color/transparent"
-          android:src="@drawable/ic_shopping_bag" />
-
-
-   </RelativeLayout>
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-     <RelativeLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content">
-        <RelativeLayout
-            android:id="@+id/containerFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </RelativeLayout>
-        <include layout="@layout/footer"
-            android:layout_below="@id/containerFragment"
-            android:layout_height="340dp"
-            android:layout_width="match_parent">
-        </include>
-     </RelativeLayout>
-
-
-
-  </ScrollView>
-
-
-</LinearLayout>
+</RelativeLayout>
