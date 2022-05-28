@@ -5,181 +5,194 @@
     android:background="#FFFFFF"
     android:layout_height="match_parent">
 
-     <androidx.core.widget.NestedScrollView
-         android:layout_width="match_parent"
-         android:fillViewport="true"
-         android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
         <LinearLayout
-            android:orientation="vertical"
-            android:background="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-             <ImageButton
-                 android:layout_width="24dp"
-                 android:id="@+id/btnCloseMenu"
-                 android:layout_marginTop="20dp"
-                 android:layout_marginLeft="16dp"
-                 android:background="@android:color/transparent"
-                 android:src="@drawable/ic_close"
-                 android:scaleType="fitXY"
-                 android:layout_height="24dp">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
 
-             </ImageButton>
-             <TextView
-                 android:text="Women"
-                 android:fontFamily="@font/tenor_sans"
-                 android:textSize="20sp"
-                 android:layout_centerHorizontal="true"
-                 android:layout_marginTop="20dp"
-                 android:textFontWeight="600"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-             </TextView>
-          </RelativeLayout>
-           <FrameLayout
-               android:layout_marginLeft="20dp"
-               android:layout_marginRight="20dp"
-               android:layout_marginTop="20dp"
-               android:layout_width="match_parent"
-               android:layout_height="10dp">
-              <ImageView
-                  android:layout_width="match_parent"
-                  android:src="@drawable/line_top_menu"
-                  android:scaleType="centerCrop"
-                  android:layout_gravity="center"
-                  android:layout_height="1dp">
+                <ImageButton
+                    android:id="@+id/btnCloseMenu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_close">
 
-              </ImageView>
-              <ImageView
-                  android:layout_width="10dp"
-                  android:src="@drawable/rectangle_menu_top"
-                  android:scaleType="fitXY"
-                  android:layout_gravity="center"
-                  android:layout_height="10dp">
+                </ImageButton>
 
-              </ImageView>
-           </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="Women"
+                    android:textFontWeight="600"
+                    android:textSize="20sp">
+
+                </TextView>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/line_top_menu">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_menu_top">
+
+                </ImageView>
+            </FrameLayout>
 
 
-           <ExpandableListView
-               android:layout_marginTop="30dp"
-               android:layout_below="@id/btnCloseMenu"
-               android:layout_width="match_parent"
-               android:divider="@android:color/transparent"
-               android:id="@+id/expandableListViewMenu"
-               android:scrollbars="none"
-               android:nestedScrollingEnabled="false"
-               android:groupIndicator="@null"
-               android:layout_height="wrap_content">
+            <ExpandableListView
+                android:id="@+id/expandableListViewMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCloseMenu"
+                android:layout_marginTop="30dp"
+                android:divider="@android:color/transparent"
+                android:groupIndicator="@null"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none">
 
-           </ExpandableListView>
-           <RelativeLayout
-               android:layout_below="@id/expandableListViewMenu"
-               android:layout_width="match_parent"
-               android:id="@+id/relativeCall"
-               android:layout_height="wrap_content">
-              <ImageButton
-                  android:background="@android:color/transparent"
-                  android:src="@drawable/ic_call"
-                  android:layout_marginLeft="20dp"
-                  android:layout_marginTop="20dp"
-                  android:scaleType="fitXY"
-                  android:id="@+id/btnCall"
-                  android:layout_width="24dp"
-                  android:layout_height="24dp">
+            </ExpandableListView>
 
-              </ImageButton>
-              <TextView
-                  android:layout_marginTop="16dp"
-                  android:layout_width="wrap_content"
-                  android:layout_height="35dp"
-                  android:text="(786) 713-8616"
-                  android:layout_toEndOf="@id/btnCall"
-                  android:layout_marginLeft="20dp"
-                  android:gravity="center|left"
-                  android:fontFamily="@font/tenor_sans"
-                  android:textFontWeight="400"
-                  android:textSize="16sp"
-                  android:textColor="#555555"
-                  >
+            <RelativeLayout
+                android:id="@+id/relativeCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandableListViewMenu">
 
-              </TextView>
-           </RelativeLayout>
-           <RelativeLayout
-               android:layout_below="@id/relativeCall"
-               android:id="@+id/relativeLocation"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
-              <ImageButton
-                  android:background="@android:color/transparent"
-                  android:src="@drawable/ic_location"
-                  android:layout_marginLeft="20dp"
-                  android:layout_marginTop="20dp"
-                  android:scaleType="fitXY"
-                  android:id="@+id/btnLocation"
-                  android:layout_width="24dp"
-                  android:layout_height="24dp">
+                <ImageButton
+                    android:id="@+id/btnCall"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_call">
 
-              </ImageButton>
-              <TextView
-                  android:layout_marginTop="16dp"
-                  android:layout_width="wrap_content"
-                  android:layout_height="35dp"
-                  android:text="Store locator"
-                  android:layout_toEndOf="@id/btnLocation"
-                  android:layout_marginLeft="20dp"
-                  android:gravity="center|left"
-                  android:fontFamily="@font/tenor_sans"
-                  android:textFontWeight="400"
-                  android:textSize="16sp"
-                  android:textColor="#555555"
-                  >
+                </ImageButton>
 
-              </TextView>
-           </RelativeLayout>
-           <ImageView
-               android:layout_below="@id/btnLocation"
-               android:layout_width="125dp"
-               android:src="@drawable/line_bottom_menu"
-               android:scaleType="fitXY"
-               android:layout_marginTop="27dp"
-               android:layout_gravity="center"
-               android:layout_height="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/btnCall"
+                    android:fontFamily="@font/tenor_sans"
+                    android:gravity="center|left"
+                    android:text="(786) 713-8616"
+                    android:textColor="#555555"
+                    android:textFontWeight="400"
+                    android:textSize="16sp">
 
-           </ImageView>
-           <RelativeLayout
-               android:layout_marginTop="27dp"
-               android:layout_gravity="center"
-               android:layout_width="142dp"
-               android:layout_height="24dp">
+                </TextView>
+            </RelativeLayout>
 
-               <ImageView
-                   android:layout_width="24dp"
-                   android:layout_height="24dp"
-                   android:layout_alignParentLeft="true"
-                   android:scaleType="fitXY"
-                   android:src="@drawable/ic_twitter"></ImageView>
-              <ImageView
-                  android:layout_centerHorizontal="true"
-                  android:layout_width="24dp"
-                  android:src="@drawable/ic_instagram"
-                  android:scaleType="fitXY"
-                  android:layout_height="24dp">
-              </ImageView>
-              <ImageView
-                  android:layout_alignParentRight="true"
-                  android:layout_width="24dp"
-                  android:src="@drawable/ic_youtube"
-                  android:scaleType="fitXY"
-                  android:layout_height="24dp">
-              </ImageView>
-           </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeCall">
+
+                <ImageButton
+                    android:id="@+id/btnLocation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_location">
+
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/btnLocation"
+                    android:fontFamily="@font/tenor_sans"
+                    android:gravity="center|left"
+                    android:text="Store locator"
+                    android:textColor="#555555"
+                    android:textFontWeight="400"
+                    android:textSize="16sp">
+
+                </TextView>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/btnLocation"
+                android:layout_gravity="center"
+                android:layout_marginTop="27dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_bottom_menu">
+
+            </ImageView>
+
+            <RelativeLayout
+                android:layout_width="142dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="27dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_twitter"></ImageView>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_instagram"></ImageView>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_youtube"></ImageView>
+            </RelativeLayout>
         </LinearLayout>
-     </androidx.core.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 

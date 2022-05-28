@@ -45,69 +45,73 @@
                </androidx.recyclerview.widget.RecyclerView>
 
            </LinearLayout>
+
            <LinearLayout
                android:id="@+id/line2"
-               android:layout_alignParentBottom="true"
-               android:orientation="vertical"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:orientation="vertical">
+
                <View
                    android:layout_width="match_parent"
-                   android:background="#000000"
+                   android:layout_height="1dp"
                    android:layout_marginLeft="16dp"
                    android:layout_marginTop="30dp"
                    android:layout_marginRight="16dp"
-                   android:layout_height="1dp"/>
+                   android:background="#000000" />
+
                <RelativeLayout
-                   android:layout_marginRight="16dp"
-                   android:layout_marginLeft="16dp"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content">
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp">
+
                    <TextView
-                       android:layout_marginTop="16dp"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:layout_marginTop="16dp"
+                       android:fontFamily="@font/tenor_sans"
                        android:text="Sub Total"
                        android:textColor="#333333"
                        android:textFontWeight="400"
-                       android:textSize="14sp"
-                       android:fontFamily="@font/tenor_sans"
-                       />
+                       android:textSize="14sp" />
+
                    <TextView
-                       android:layout_alignParentRight="true"
-                       android:layout_marginTop="16dp"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginTop="16dp"
+                       android:fontFamily="@font/tenor_sans"
                        android:text="$240"
                        android:textColor="#DD8560"
                        android:textFontWeight="400"
-                       android:textSize="16sp"
-                       android:fontFamily="@font/tenor_sans"
-                       />
+                       android:textSize="16sp" />
 
                </RelativeLayout>
+
                <TextView
-                   android:layout_alignParentRight="true"
-                   android:layout_marginTop="16dp"
-                   android:layout_marginLeft="16dp"
-                   android:layout_marginRight="16dp"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginRight="16dp"
+                   android:fontFamily="@font/tenor_sans"
                    android:text="*shipping charges, taxes and discount codes    are calculated at the time of accounting. "
                    android:textColor="#888888"
                    android:textFontWeight="400"
-                   android:textSize="16sp"
-                   android:fontFamily="@font/tenor_sans"
-                   android:layout_gravity="center"
-                   />
+                   android:textSize="16sp" />
+
                <ImageButton
+                   android:id="@+id/btnBuy"
                    android:layout_width="match_parent"
-                   android:background="@android:color/transparent"
-                   android:scaleType="fitXY"
-                   android:src="@drawable/ic_buy_now"
                    android:layout_height="56dp"
                    android:layout_marginTop="16dp"
-                   />
+                   android:background="@android:color/transparent"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/ic_buy_now" />
            </LinearLayout>
        </RelativeLayout>
 

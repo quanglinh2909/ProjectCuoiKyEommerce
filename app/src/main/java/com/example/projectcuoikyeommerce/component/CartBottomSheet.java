@@ -1,6 +1,7 @@
 package com.example.projectcuoikyeommerce.component;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.activity.CheckoutActivity;
 import com.example.projectcuoikyeommerce.adapter.CartAdapter;
 import com.example.projectcuoikyeommerce.model.Cart;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -28,7 +30,7 @@ public class CartBottomSheet extends BottomSheetDialogFragment {
     private RecyclerView recyclerviewCart;
     private CartAdapter cartAdapter;
     private List<Cart> cartList = new ArrayList<>();
-
+    private ImageButton btnBuy;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -62,10 +64,15 @@ public class CartBottomSheet extends BottomSheetDialogFragment {
 
     private void handleAction() {
         btnCancel.setOnClickListener(v -> bottomSheetDialog.dismiss());
+        btnBuy.setOnClickListener(b->{
+            Intent intent = new Intent(getContext(), CheckoutActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void initUi() {
         btnCancel = view.findViewById(R.id.btnCloseCart);
         recyclerviewCart = view.findViewById(R.id.recyclerviewCart);
+        btnBuy = view.findViewById(R.id.btnBuy);
     }
 }

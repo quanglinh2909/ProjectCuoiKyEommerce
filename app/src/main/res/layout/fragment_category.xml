@@ -15,18 +15,17 @@
           android:layout_marginTop="17dp"
           android:layout_width="match_parent"
           android:layout_height="40dp">
+
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="match_parent"
-              android:text="4500 Apparel"
-              android:gravity="center|left"
-              android:fontFamily="@font/tenor_sans"
-              android:textSize="18sp"
-              android:textFontWeight="400"
               android:layout_marginLeft="15dp"
+              android:fontFamily="@font/tenor_sans"
+              android:gravity="center|left"
+              android:text="4500 Apparel"
               android:textColor="#333333"
-              >
-          </TextView>
+              android:textFontWeight="400"
+              android:textSize="18sp"></TextView>
 
           <ImageButton
               android:id="@+id/btnFilter"
