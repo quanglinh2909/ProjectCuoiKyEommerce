@@ -8,9 +8,12 @@ import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.adapter.CartAdapter;
 import com.example.projectcuoikyeommerce.model.Cart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +22,7 @@ public class CheckoutActivity extends AppCompatActivity {
     private RecyclerView recyclerviewCart;
     private CartAdapter cartAdapter;
     private List<Cart> cartList = new ArrayList<>();
-    private FrameLayout btnCheckout;
+    private Button btnCheckout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +48,8 @@ public class CheckoutActivity extends AppCompatActivity {
     private void handleAction() {
         btnCheckout.setOnClickListener(v -> {
             Log.d("demo", "handleAction: de,p");
+            Intent intent = new Intent(CheckoutActivity.this,AddAddressActivity.class);
+            startActivity(intent);
         });
     }
     private void initUi() {

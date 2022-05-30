@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectCuoiKyEommerce">
         <activity
+            android:name=".activity.AddAddressActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CheckoutActivity"
             android:exported="false" />
         <activity
@@ -29,10 +32,10 @@
         </activity>
         <activity
             android:name=".activity.SignUpActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

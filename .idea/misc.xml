@@ -15,6 +15,8 @@
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/drawable/ic_add_while.xml" value="0.1305" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_add_address.xml" value="0.22" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_add_adress.xml" value="0.1718683197947841" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_checkout.xml" value="0.25" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main.xml" value="0.1718683197947841" />
@@ -25,7 +27,7 @@
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_category.xml" value="0.25" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_check_out.xml" value="0.25" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_check_out_infomation.xml" value="0.1718683197947841" />
-        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_home.xml" value="0.16" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_home.xml" value="0.67" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_notification.xml" value="0.1718683197947841" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_product_detail.xml" value="0.25" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/header.xml" value="0.1718683197947841" />
@@ -34,6 +36,7 @@
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/item_menu_group.xml" value="0.67" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/item_product.xml" value="0.16969185310257492" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/item_product_list_view.xml" value="0.33" />
+        <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/item_slide_image_detail.xml" value="0.1718683197947841" />
         <entry key="..\:/MyWorkplace/workspace-mobile/ProjectCuoiKyEommerce/app/src/main/res/layout/menu_bottom_sheet.xml" value="0.18" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/drawable/header.xml" value="0.1805" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main.xml" value="0.1" />
