@@ -34,11 +34,10 @@
             android:layout_gravity="center"
             android:fontFamily="@font/tenor_sans"
             android:text="Add shipping adress"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textFontWeight="400"
-            android:textSize="18sp"
-            android:textAllCaps="true"
-            />
+            android:textSize="18sp" />
     </RelativeLayout>
 
 
