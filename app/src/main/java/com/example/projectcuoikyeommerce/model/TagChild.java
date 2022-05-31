@@ -3,9 +3,10 @@ package com.example.projectcuoikyeommerce.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class TagChild {
+public class TagChild implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -15,6 +16,10 @@ public class TagChild {
     @SerializedName("idTagParent")
     @Expose
     private TagParent idTagParent;
+
+    @SerializedName("code")
+    @Expose
+    private Integer code;
 
     public Integer getId() {
         return id;
@@ -40,12 +45,19 @@ public class TagChild {
         this.idTagParent = idTagParent;
     }
 
+    public Integer getCode() {
+        return code;
+    }
 
+    public void setCode(Integer code) {
+        this.code = code;
+    }
 
-    public TagChild(Integer id, String name, TagParent idTagParent) {
+    public TagChild(Integer id, String name, TagParent idTagParent, Integer code) {
         this.id = id;
         this.name = name;
         this.idTagParent = idTagParent;
+        this.code = code;
     }
 
     @Override

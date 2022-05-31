@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.projectcuoikyeommerce.event.detail.DetailEvent;
 import com.example.projectcuoikyeommerce.model.ColorProduct;
 
 import java.util.List;
@@ -16,11 +15,9 @@ import com.example.projectcuoikyeommerce.R;
 
 public class AdapterColor extends RecyclerView.Adapter<AdapterColor.ViewHolder> {
     private List<ColorProduct> colorProductList;
-    private DetailEvent colorProductEvent;
 
-    public AdapterColor(List<ColorProduct> colorProductList, DetailEvent colorProductEvent) {
+    public AdapterColor(List<ColorProduct> colorProductList) {
         this.colorProductList = colorProductList;
-        this.colorProductEvent = colorProductEvent;
     }
 
     @NonNull

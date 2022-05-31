@@ -3,6 +3,7 @@
     android:layout_marginTop="12dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/itemProduct"
     android:layout_height="134dp">
     <ImageView
         android:id="@+id/imageItemProduct"
@@ -20,19 +21,9 @@
         android:layout_toRightOf="@id/imageItemProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:text="LAMEREI"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:gravity="center|left"
-            android:fontFamily="@font/tenor_sans"
-            android:textFontWeight="400"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            >
 
-        </TextView>
         <TextView
+            android:id="@+id/txtNameProduct"
             android:text="Recycle Boucle Knit Cardigan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,6 +36,7 @@
 
         </TextView>
         <TextView
+            android:id="@+id/txtPriceProduct"
             android:text="$120"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
@@ -144,6 +136,22 @@
             android:text="L"
             android:gravity="center"
             android:id="@+id/txtL"
+            android:textColor="#555555"
+            android:textSize="10sp"
+            android:fontFamily="@font/tenor_sans"
+            android:textFontWeight="400"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/back_ground_size"
+            android:layout_toRightOf="@id/txtL"
+            android:text="XL"
+            android:gravity="center"
+            android:id="@+id/txtXL"
             android:textColor="#555555"
             android:textSize="10sp"
             android:fontFamily="@font/tenor_sans"

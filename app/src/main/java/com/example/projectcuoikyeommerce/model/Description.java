@@ -1,32 +1,25 @@
 package com.example.projectcuoikyeommerce.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Description {
-    private String id;
-    private Product product;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("title")
+    @Expose
     private String title;
+    @SerializedName("description")
+    @Expose
     private String description;
 
-    public Description(String id, Product product, String title, String description) {
-        this.id = id;
-        this.product = product;
-        this.title = title;
-        this.description = description;
-    }
-
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
     }
 
     public String getTitle() {
@@ -44,12 +37,10 @@ public class Description {
     public void setDescription(String description) {
         this.description = description;
     }
-
     @Override
     public String toString() {
         return "Description{" +
                 "id='" + id + '\'' +
-                ", product=" + product +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 '}';

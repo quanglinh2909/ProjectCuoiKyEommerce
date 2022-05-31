@@ -2,19 +2,24 @@ package com.example.projectcuoikyeommerce.model;
 
 public class Cart {
     private String id;
-    private User user;
-    private Product product;
-    private int amount;
+    private User idUser;
+    private Product idProduct;
+    private int quantity;
     private String size;
-    private ColorProduct colorProduct;
 
-    public Cart(String id, User user, Product product, int amount, String size, ColorProduct colorProduct) {
-        this.id = id;
-        this.user = user;
-        this.product = product;
-        this.amount = amount;
+    public Cart( User idUser, Product product, int amount, String size) {
+        this.idUser = idUser;
+        this.idProduct = product;
+        this.quantity = amount;
         this.size = size;
-        this.colorProduct = colorProduct;
+    }
+
+    public Cart(String id, User idUser, Product idProduct, int quantity, String size) {
+        this.id = id;
+        this.idUser = idUser;
+        this.idProduct = idProduct;
+        this.quantity = quantity;
+        this.size = size;
     }
 
     public String getId() {
@@ -25,28 +30,28 @@ public class Cart {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public User getIdUser() {
+        return idUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setIdUser(User idUser) {
+        this.idUser = idUser;
     }
 
     public Product getProduct() {
-        return product;
+        return idProduct;
     }
 
     public void setProduct(Product product) {
-        this.product = product;
+        this.idProduct = product;
     }
 
-    public int getAmount() {
-        return amount;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getSize() {
@@ -57,23 +62,16 @@ public class Cart {
         this.size = size;
     }
 
-    public ColorProduct getColorProduct() {
-        return colorProduct;
-    }
 
-    public void setColorProduct(ColorProduct colorProduct) {
-        this.colorProduct = colorProduct;
-    }
 
     @Override
     public String toString() {
         return "Cart{" +
                 "id='" + id + '\'' +
-                ", user=" + user +
-                ", product=" + product +
-                ", amount=" + amount +
+                ", user=" + idUser +
+                ", product=" + idProduct +
+                ", amount=" + quantity +
                 ", size='" + size + '\'' +
-                ", colorProduct=" + colorProduct +
                 '}';
     }
 }

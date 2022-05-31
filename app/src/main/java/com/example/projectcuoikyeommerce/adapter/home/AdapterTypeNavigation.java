@@ -24,7 +24,6 @@ public class AdapterTypeNavigation extends RecyclerView.Adapter<AdapterTypeNavig
     private List<TagParent> items;
     private HomeEvent homeEvent;
     private String textSelected = "";
-    private TextView textView;
 
     public AdapterTypeNavigation(List<TagParent> items, HomeEvent homeEvent) {
         this.items = items;

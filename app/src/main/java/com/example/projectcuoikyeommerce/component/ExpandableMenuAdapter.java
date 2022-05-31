@@ -1,6 +1,5 @@
 package com.example.projectcuoikyeommerce.component;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +34,6 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        Log.d("AAA", "getChildrenCount: " + groupPosition);
         if (mListGroup != null && mListItem != null) {
             if (mListItem.containsKey(mListGroup.get(groupPosition))) {
                 return mListItem.get(mListGroup.get(groupPosition)).size();
@@ -105,7 +103,7 @@ public class ExpandableMenuAdapter extends BaseExpandableListAdapter {
         textView.setText(tagChild.getName());
 
         textView.setOnClickListener(v -> {
-            menuEvent.clickItem();
+            menuEvent.clickItemMenu(mListGroup.get(groupPosition),tagChild);
         });
         return convertView;
     }

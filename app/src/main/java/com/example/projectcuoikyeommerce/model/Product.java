@@ -1,29 +1,39 @@
 package com.example.projectcuoikyeommerce.model;
 
-public class Product {
-    private String id;
-    private Branch branch;
-    private String name;
-    private double price;
-    private int S;
-    private int M;
-    private int L;
-    private int XL;
-    private Collection collection;
-    private TagChild tagChild;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-    public Product(String id, Branch branch, String name, double price, int s, int m, int l, int XL, Collection collection, TagChild tagChild) {
-        this.id = id;
-        this.branch = branch;
-        this.name = name;
-        this.price = price;
-        S = s;
-        M = m;
-        L = l;
-        this.XL = XL;
-        this.collection = collection;
-        this.tagChild = tagChild;
-    }
+public class Product {
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("price")
+    @Expose
+    private Integer price;
+    @SerializedName("S")
+    @Expose
+    private Integer s;
+    @SerializedName("M")
+    @Expose
+    private Integer m;
+    @SerializedName("L")
+    @Expose
+    private Integer l;
+    @SerializedName("XL")
+    @Expose
+    private Integer xl;
+    @SerializedName("idlocalbranch")
+    @Expose
+    private Branch idlocalbranch;
+    @SerializedName("idColection")
+    @Expose
+    private Collection idColection;
+    @SerializedName("idParent")
+    @Expose
+    private TagParent idParent;
 
     public String getId() {
         return id;
@@ -31,14 +41,6 @@ public class Product {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Branch getBranch() {
-        return branch;
-    }
-
-    public void setBranch(Branch branch) {
-        this.branch = branch;
     }
 
     public String getName() {
@@ -49,75 +51,96 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    public int getS() {
-        return S;
+    public Integer getS() {
+        return s;
     }
 
-    public void setS(int s) {
-        S = s;
+    public void setS(Integer s) {
+        this.s = s;
     }
 
-    public int getM() {
-        return M;
+    public Integer getM() {
+        return m;
     }
 
-    public void setM(int m) {
-        M = m;
+    public void setM(Integer m) {
+        this.m = m;
     }
 
-    public int getL() {
-        return L;
+    public Integer getL() {
+        return l;
     }
 
-    public void setL(int l) {
-        L = l;
+    public void setL(Integer l) {
+        this.l = l;
     }
 
-    public int getXL() {
-        return XL;
+    public Integer getXl() {
+        return xl;
     }
 
-    public void setXL(int XL) {
-        this.XL = XL;
+    public void setXl(Integer xl) {
+        this.xl = xl;
     }
 
-    public Collection getCollection() {
-        return collection;
+    public Branch getIdlocalbranch() {
+        return idlocalbranch;
     }
 
-    public void setCollection(Collection collection) {
-        this.collection = collection;
+    public void setIdlocalbranch(Branch idlocalbranch) {
+        this.idlocalbranch = idlocalbranch;
     }
 
-    public TagChild getTagChild() {
-        return tagChild;
+    public Collection getIdColection() {
+        return idColection;
     }
 
-    public void setTagChild(TagChild tagChild) {
-        this.tagChild = tagChild;
+    public void setIdColection(Collection idColection) {
+        this.idColection = idColection;
+    }
+
+    public TagParent getIdParent() {
+        return idParent;
+    }
+
+    public void setIdParent(TagParent idParent) {
+        this.idParent = idParent;
+    }
+
+    public Product(String id, String name, Integer price, Integer s, Integer m, Integer l, Integer xl, Branch idlocalbranch, Collection idColection, TagParent idParent) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.s = s;
+        this.m = m;
+        this.l = l;
+        this.xl = xl;
+        this.idlocalbranch = idlocalbranch;
+        this.idColection = idColection;
+        this.idParent = idParent;
     }
 
     @Override
     public String toString() {
         return "Product{" +
                 "id='" + id + '\'' +
-                ", branch=" + branch +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", S=" + S +
-                ", M=" + M +
-                ", L=" + L +
-                ", XL=" + XL +
-                ", collection=" + collection +
-                ", tagChild=" + tagChild +
+                ", s=" + s +
+                ", m=" + m +
+                ", l=" + l +
+                ", xl=" + xl +
+                ", idlocalbranch=" + idlocalbranch +
+                ", idColection=" + idColection +
+                ", idParent=" + idParent +
                 '}';
     }
 }

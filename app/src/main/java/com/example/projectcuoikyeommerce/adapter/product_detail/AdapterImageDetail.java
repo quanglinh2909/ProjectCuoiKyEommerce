@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.bumptech.glide.Glide;
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.constant.URL;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.Image;
 
@@ -31,9 +33,8 @@ public class AdapterImageDetail extends PagerAdapter {
         ImageView imageItem = view.findViewById(R.id.imgItemSlide);
         Image image = mListBanners.get(position);
         if(image != null){
-//            Glide.with(mContext).load(Uri.parse(URL.BASE_URL+"images/Banner.jpg")).into(imageItemBanner);
+            Glide.with(mContext).load(URL.BASE_URL+image.getUrl()).into(imageItem);
 //            Glide.with(view.getContext()).load(URL.BASE_URL+"images/Banner.jpg").placeholder(R.drawable.banner_item1).dontAnimate().into(imageItemBanner);
-            imageItem.setImageResource(mListBanners.get(position).getUrlImage());
         }
 
         container.addView(view);

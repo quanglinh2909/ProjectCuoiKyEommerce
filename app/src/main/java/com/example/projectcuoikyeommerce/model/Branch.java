@@ -1,23 +1,27 @@
 package com.example.projectcuoikyeommerce.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Branch {
-    private String id;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("name")
+    @Expose
     private String name;
+    @SerializedName("description")
+    @Expose
     private String description;
-    private String urlString;
+    @SerializedName("image")
+    @Expose
+    private String image;
 
-    public Branch(String id, String name, String description, String urlString) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.urlString = urlString;
-    }
-
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -37,21 +41,28 @@ public class Branch {
         this.description = description;
     }
 
-    public String getUrlString() {
-        return urlString;
+    public String getImage() {
+        return image;
     }
 
-    public void setUrlString(String urlString) {
-        this.urlString = urlString;
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Branch(Integer id, String name, String description, String image) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.image = image;
     }
 
     @Override
     public String toString() {
         return "Branch{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", urlString='" + urlString + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }

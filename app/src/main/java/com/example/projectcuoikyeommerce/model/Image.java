@@ -1,14 +1,33 @@
 package com.example.projectcuoikyeommerce.model;
 
-public class Image {
-    private Product product;
-    private int urlImage;
-    private String alt;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-    public Image(Product product, int urlImage, String alt) {
-        this.product = product;
-        this.urlImage = urlImage;
-        this.alt = alt;
+public class Image {
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("url")
+    @Expose
+    private String url;
+    @SerializedName("idProduct")
+    @Expose
+    private Product product;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Product getProduct() {
@@ -19,28 +38,18 @@ public class Image {
         this.product = product;
     }
 
-    public int getUrlImage() {
-        return urlImage;
-    }
-
-    public void setUrlImage(int urlImage) {
-        this.urlImage = urlImage;
-    }
-
-    public String getAlt() {
-        return alt;
-    }
-
-    public void setAlt(String alt) {
-        this.alt = alt;
+    public Image(Integer id, String url, Product product) {
+        this.id = id;
+        this.url = url;
+        this.product = product;
     }
 
     @Override
     public String toString() {
         return "Image{" +
-                "product=" + product +
-                ", urlImage='" + urlImage + '\'' +
-                ", alt='" + alt + '\'' +
+                "id=" + id +
+                ", url='" + url + '\'' +
+                ", product=" + product +
                 '}';
     }
 }

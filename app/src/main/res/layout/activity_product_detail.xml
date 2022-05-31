@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductDetailActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="510dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="530dp">
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circleIndicatorDetail"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center">
+
+                </me.relex.circleindicator.CircleIndicator>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/btnBack"
+                   android:layout_width="40dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:background="@android:color/transparent"
+                   app:cardCornerRadius="100dp"
+                   android:layout_height="40dp">
+                   <ImageView
+                       android:background="#26000000"
+                       android:scaleType="centerInside"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       android:src="@drawable/ic_baseline_arrow_back_detail" />
+
+               </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:id="@+id/btnExport"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_export">
+
+                    </ImageButton>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtNameProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="Recycle Boucle Knit Cardigan Pink"
+                    android:textColor="#000000"
+                    android:textFontWeight="400"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtPriceProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="$12"
+                    android:textColor="#DD8560"
+                    android:textFontWeight="400"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+<!--                <RelativeLayout-->
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="24dp">-->
+<!--                    <TextView-->
+<!--                        android:text="Color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textColor="#555555"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:textFontWeight="400"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:fontFamily="@font/tenor_sans"-->
+<!--                        android:id="@+id/txtColor"-->
+<!--                        >-->
+
+<!--                    </TextView>-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerViewColor"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_toRightOf="@id/txtColor">-->
+
+<!--                    </androidx.recyclerview.widget.RecyclerView>-->
+<!--                </RelativeLayout>-->
+                <RelativeLayout
+
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp">
+                    <TextView
+                        android:text="Size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/tenor_sans"
+                        android:id="@+id/txtSize"
+                        >
+
+                    </TextView>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txtSize"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/recyclerViewSize"
+                        >
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="25dp"
+                android:background="#000000">
+
+                <ImageButton
+                    android:id="@+id/btnAddCart"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_group_206">
+
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_heart"
+                    android:layout_marginRight="25dp"
+                    >
+
+                </ImageButton>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerviewDicription"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerviewAttention"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

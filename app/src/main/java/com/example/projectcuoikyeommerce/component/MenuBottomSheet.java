@@ -117,15 +117,6 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
 
             }
         });
-        List<TagChild> tagChildList = new ArrayList<>();
-        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
-        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
-        tagChildList.add(new TagChild(1,"quan",new TagParent(1,"category")));
-        tagParentListMap.put(new TagParent(1,"category"),tagChildList);
-        parentList = new ArrayList<>();
-        parentList.add(new TagParent(1,"category"));
-        expandableMenuAdapter = new ExpandableMenuAdapter(parentList, tagParentListMap,menuEvent);
-        expandableListViewMenu.setAdapter(expandableMenuAdapter);
 
         return tagParentListMap;
 

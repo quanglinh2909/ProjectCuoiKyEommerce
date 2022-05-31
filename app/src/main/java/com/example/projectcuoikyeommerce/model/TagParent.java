@@ -3,9 +3,10 @@ package com.example.projectcuoikyeommerce.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class TagParent {
+public class TagParent implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;

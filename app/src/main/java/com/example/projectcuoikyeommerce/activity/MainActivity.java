@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -22,19 +19,18 @@ import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.component.CartBottomSheet;
 import com.example.projectcuoikyeommerce.component.MenuBottomSheet;
 import com.example.projectcuoikyeommerce.constant.FragmentID;
+import com.example.projectcuoikyeommerce.constant.KeyIntent;
+import com.example.projectcuoikyeommerce.event.ExploreMoreEvent;
 import com.example.projectcuoikyeommerce.event.MenuEvent;
-import com.example.projectcuoikyeommerce.event.home.ProductHomeEvent;
-import com.example.projectcuoikyeommerce.fragment.CartFragment;
-import com.example.projectcuoikyeommerce.fragment.CategoryFragment;
 import com.example.projectcuoikyeommerce.fragment.HomeFragment;
 import com.example.projectcuoikyeommerce.fragment.MyFragment;
 import com.example.projectcuoikyeommerce.fragment.NotificationFragment;
-import com.example.projectcuoikyeommerce.fragment.ProductDetailFragment;
+import com.example.projectcuoikyeommerce.model.TagChild;
+import com.example.projectcuoikyeommerce.model.TagParent;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity implements MenuEvent, ProductHomeEvent {
+public class MainActivity extends AppCompatActivity implements MenuEvent, ExploreMoreEvent {
     private int currentFragment = FragmentID.FRAGMENT_HOME;
     private ImageButton btnMenu, btnShoppingBag;
     private MenuBottomSheet menuBottomSheet;
@@ -46,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent, Produc
     private long backTime;
     private Toast mToast;
     private String TAG = "AAA";
-
+    private TagParent tagParent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent, Produc
 
         initUi();
         handleAction();
-        replaceFragment(new HomeFragment(MainActivity.this));
+        replaceFragment(new HomeFragment(this));
 //        replaceFragment(new CategoryFragment());
 
         menuBottomSheet = new MenuBottomSheet(MainActivity.this);
@@ -102,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent, Produc
         });
         btnBackHome.setOnClickListener(v -> {
             if (currentFragment != FragmentID.FRAGMENT_HOME) {
-                replaceFragment(new HomeFragment(MainActivity.this));
+                replaceFragment(new HomeFragment(this));
                 currentFragment = FragmentID.FRAGMENT_HOME;
                 header.setBackgroundResource(R.drawable.header);
                 header.setVisibility(View.VISIBLE);
@@ -149,16 +145,7 @@ public class MainActivity extends AppCompatActivity implements MenuEvent, Produc
                 return true;
             }
         });
-//        btnShoppingBag.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (currentFragment != FragmentID.FRAGMENT_CARD) {
-//                    replaceFragment(new CartFragment());
-//                    currentFragment = FragmentID.FRAGMENT_CARD;
-//                    header.setBackgroundResource(R.drawable.header);
-//                }
-//            }
-//        });
+
     }
 
 
@@ -170,24 +157,46 @@ public class MainActivity extends AppCompatActivity implements MenuEvent, Produc
 
 
     @Override
-    public void clickItem() {
-        replaceFragment(new CategoryFragment());
-        currentFragment = FragmentID.FRAGMENT_CATEGORY;
-        menuBottomSheet.dismiss();
-        header.setBackgroundColor(getResources().getColor(R.color.white));
-        header.setVisibility(View.VISIBLE);
-        footer.setVisibility(View.VISIBLE);
+    public void clickItemMenu(TagParent tagParent,TagChild tagChild) {
+//        CategoryFragment categoryFragment = new CategoryFragment();
+//        categoryFragment.setTagParent(tagParent);
+//        categoryFragment.setTagChild(tagChild);
+//        replaceFragment(categoryFragment);
+//        currentFragment = FragmentID.FRAGMENT_CATEGORY;
+//        menuBottomSheet.dismiss();
+//        header.setBackgroundColor(getResources().getColor(R.color.white));
+//        header.setVisibility(View.VISIBLE);
+//        footer.setVisibility(View.VISIBLE);
+
+        Intent intent  = new Intent(MainActivity.this,CategoryActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(KeyIntent.KEY_TAG_PARENT,tagParent);
+        bundle.putSerializable(KeyIntent.KEY_TAF_CHILD,tagChild);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 
     @Override
-    public void onClickItem() {
-        replaceFragment(new ProductDetailFragment());
-        currentFragment = FragmentID.FRAGMENT_PRODUCT_DETAIL;
-        header.setBackgroundColor(getResources().getColor(R.color.white));
-        header.setVisibility(View.VISIBLE);
-        footer.setVisibility(View.VISIBLE);
+    public void clickExplore() {
+//        CategoryFragment categoryFragment = new CategoryFragment();
+//        categoryFragment.setTagParent(tagParent);
+//        categoryFragment.setTagChild(null);
+//        replaceFragment(categoryFragment);
+//        currentFragment = FragmentID.FRAGMENT_CATEGORY;
+//        header.setBackgroundColor(getResources().getColor(R.color.white));
+//        header.setVisibility(View.VISIBLE);
+//        footer.setVisibility(View.VISIBLE);
 
+        Intent intent  = new Intent(MainActivity.this,CategoryActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(KeyIntent.KEY_TAG_PARENT,tagParent);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
+    public void setTagParent(TagParent tagParent){
+        this.tagParent = tagParent;
+    }
+
 }
