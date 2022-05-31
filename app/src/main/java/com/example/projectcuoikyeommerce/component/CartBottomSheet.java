@@ -37,15 +37,10 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     private ImageButton btnCancel;
     private RecyclerView recyclerviewCart;
     private CartAdapter cartAdapter;
-<<<<<<< HEAD
     private List<ProductCartDto> cartList = new ArrayList<>();
     private CartPresenter presenter;
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
-=======
-    private List<Cart> cartList = new ArrayList<>();
     private ImageButton btnBuy;
->>>>>>> f5afef3659767a2450a4e56b50cd687ceb7084b4
+
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -65,9 +60,10 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void initCart() {
         cartList.clear();
-        cartList.addAll(presenter.getProduct(DataLocalManager.getInstance().getUser().getId()));;
+        cartList.addAll(presenter.getProduct(DataLocalManager.getInstance().getUser().getId()));
+        ;
 
-        cartAdapter = new CartAdapter(cartList,this);
+        cartAdapter = new CartAdapter(cartList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerviewCart.setLayoutManager(linearLayoutManager);
@@ -76,7 +72,7 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
 
     private void handleAction() {
         btnCancel.setOnClickListener(v -> bottomSheetDialog.dismiss());
-        btnBuy.setOnClickListener(b->{
+        btnBuy.setOnClickListener(b -> {
             Intent intent = new Intent(getContext(), CheckoutActivity.class);
             startActivity(intent);
         });
@@ -85,8 +81,9 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     private void initUi() {
         btnCancel = view.findViewById(R.id.btnCloseCart);
         recyclerviewCart = view.findViewById(R.id.recyclerviewCart);
-<<<<<<< HEAD
         presenter = new CartPresenter();
+        btnBuy = view.findViewById(R.id.btnBuy);
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -94,9 +91,9 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     public void clickIncrease(int position) {
         ProductCartDto cartDto = cartList.get(position);
         //Integer id, Integer idUser, String idProduct, Integer quantity, String size
-        CartDto cart = new CartDto(cartDto.getCartEntityId(),cartDto.getCartEntityIdUserId()
-                ,cartDto.getCartEntityIdProductId(),cartDto.getCartEntityQuantity()+1,cartDto.getCartEntitySize());
-        CartDto cartDto1 =  presenter.updateCard(cart);
+        CartDto cart = new CartDto(cartDto.getCartEntityId(), cartDto.getCartEntityIdUserId()
+                , cartDto.getCartEntityIdProductId(), cartDto.getCartEntityQuantity() + 1, cartDto.getCartEntitySize());
+        CartDto cartDto1 = presenter.updateCard(cart);
         cartList.get(position).setCartEntityQuantity(cartDto1.getQuantity());
         cartAdapter.notifyDataSetChanged();
 
@@ -107,9 +104,9 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     public void clickReduced(int position) {
         ProductCartDto cartDto = cartList.get(position);
         //Integer id, Integer idUser, String idProduct, Integer quantity, String size
-        CartDto cart = new CartDto(cartDto.getCartEntityId(),cartDto.getCartEntityIdUserId()
-                ,cartDto.getCartEntityIdProductId(),cartDto.getCartEntityQuantity()-1,cartDto.getCartEntitySize());
-       CartDto cartDto1 =  presenter.updateCard(cart);
+        CartDto cart = new CartDto(cartDto.getCartEntityId(), cartDto.getCartEntityIdUserId()
+                , cartDto.getCartEntityIdProductId(), cartDto.getCartEntityQuantity() - 1, cartDto.getCartEntitySize());
+        CartDto cartDto1 = presenter.updateCard(cart);
         cartList.get(position).setCartEntityQuantity(cartDto1.getQuantity());
         cartAdapter.notifyDataSetChanged();
     }
@@ -119,13 +116,10 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     public void inputEditTex(int position, int value) {
         ProductCartDto cartDto = cartList.get(position);
 
-        CartDto cart = new CartDto(cartDto.getCartEntityId(),cartDto.getCartEntityIdUserId()
-                ,cartDto.getCartEntityIdProductId(),value,cartDto.getCartEntitySize());
-        CartDto cartDto1 =  presenter.updateCard(cart);
+        CartDto cart = new CartDto(cartDto.getCartEntityId(), cartDto.getCartEntityIdUserId()
+                , cartDto.getCartEntityIdProductId(), value, cartDto.getCartEntitySize());
+        CartDto cartDto1 = presenter.updateCard(cart);
         cartList.get(position).setCartEntityQuantity(cartDto1.getQuantity());
         cartAdapter.notifyDataSetChanged();
-=======
-        btnBuy = view.findViewById(R.id.btnBuy);
->>>>>>> f5afef3659767a2450a4e56b50cd687ceb7084b4
     }
 }

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.adapter.CartAdapter;
+import com.example.projectcuoikyeommerce.dto.ProductCartDto;
 import com.example.projectcuoikyeommerce.model.Cart;
 
 import android.content.Intent;
@@ -21,7 +22,7 @@ import java.util.List;
 public class CheckoutActivity extends AppCompatActivity {
     private RecyclerView recyclerviewCart;
     private CartAdapter cartAdapter;
-    private List<Cart> cartList = new ArrayList<>();
+    private List<ProductCartDto> cartList = new ArrayList<>();
     private Button btnCheckout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
