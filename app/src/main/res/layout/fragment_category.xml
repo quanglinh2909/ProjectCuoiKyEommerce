@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CategoryFragment">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_marginTop="17dp"
+          android:layout_width="match_parent"
+          android:layout_height="40dp">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="15dp"
+              android:fontFamily="@font/tenor_sans"
+              android:gravity="center|left"
+              android:text="4500 Apparel"
+              android:textColor="#333333"
+              android:textFontWeight="400"
+              android:textSize="18sp"></TextView>
+
+          <ImageButton
+              android:id="@+id/btnFilter"
+              android:layout_width="36dp"
+              android:layout_height="36dp"
+              android:layout_alignParentRight="true"
+              android:layout_marginTop="2dp"
+              android:layout_marginRight="16dp"
+              android:background="@drawable/border_radius_category"
+              android:scaleType="center"
+              android:src="@drawable/ic_filter">
+
+          </ImageButton>
+
+          <ImageButton
+              android:id="@+id/btnListViewAndGirdView"
+              android:layout_width="36dp"
+              android:layout_height="36dp"
+              android:layout_marginTop="2dp"
+              android:layout_marginRight="17dp"
+              android:layout_toLeftOf="@id/btnFilter"
+              android:background="@drawable/border_radius_category"
+              android:scaleType="center"
+              android:src="@drawable/ic_grid_view">
+
+          </ImageButton>
+
+      </RelativeLayout>
+      <RelativeLayout
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="17dp"
+          android:layout_width="200dp"
+          android:layout_height="32dp">
+          <TextView
+              android:layout_width="95dp"
+              android:text="Women"
+              android:padding="8dp"
+              android:paddingRight="10dp"
+              android:paddingLeft="10dp"
+              android:gravity="center"
+              android:textColor="#333333"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:fontFamily="@font/tenor_sans"
+              android:background="@drawable/back_ground_text_category"
+              android:layout_height="32dp">
+
+          </TextView>
+          <TextView
+              android:layout_alignParentRight="true"
+              android:layout_width="95dp"
+              android:text="All apparel"
+              android:padding="8dp"
+              android:paddingRight="10dp"
+              android:paddingLeft="10dp"
+              android:gravity="center"
+              android:textColor="#333333"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:fontFamily="@font/tenor_sans"
+              android:background="@drawable/back_ground_text_category"
+              android:layout_height="32dp">
+
+          </TextView>
+
+      </RelativeLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          android:nestedScrollingEnabled="false"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="12dp"
+          android:id="@+id/recyclerViewCategory"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+      </androidx.recyclerview.widget.RecyclerView>
+  </LinearLayout>
+
+</FrameLayout>

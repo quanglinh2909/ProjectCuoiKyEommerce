@@ -20,6 +20,10 @@
             android:exported="false" />
         <activity
             android:name=".activity.ProductDetailActivity"
+            android:name=".activity.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CheckoutActivity"
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
