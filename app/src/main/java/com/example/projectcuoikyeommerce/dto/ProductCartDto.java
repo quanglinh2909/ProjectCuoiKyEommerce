@@ -68,6 +68,16 @@ public class ProductCartDto {
     @Expose
     private String imageEntityIdProductId;
 
+    private boolean isCheck;
+
+    public boolean isCheck() {
+        return isCheck;
+    }
+
+    public void setCheck(boolean check) {
+        isCheck = check;
+    }
+
     public Integer getCartEntityId() {
         return cartEntityId;
     }

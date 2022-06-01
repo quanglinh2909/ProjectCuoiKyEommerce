@@ -4,11 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginBottom="16dp"
-    android:layout_height="134dp">
+    android:background="#FFFFFF"
+    android:paddingBottom="16dp"
+    android:layout_height="150dp">
 
     <ImageView
+        android:layout_marginLeft="10dp"
         android:id="@+id/imgItemCart"
         android:layout_width="100dp"
         android:layout_height="134dp"
@@ -69,17 +70,18 @@
             android:layout_marginTop="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/txtPrice"
-                android:layout_alignParentBottom="true"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="$120"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/tenor_sans"
                 android:gravity="center"
+                android:text="0 VNĐ"
                 android:textColor="#DD8560"
                 android:textFontWeight="400"
                 android:textSize="15sp"
-                android:fontFamily="@font/tenor_sans"
 
                 />
             <CheckBox

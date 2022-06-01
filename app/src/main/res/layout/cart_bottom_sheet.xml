@@ -5,15 +5,18 @@
     android:layout_height="match_parent">
 
        <RelativeLayout
+           android:layout_alignParentTop="true"
            android:layout_width="match_parent"
            android:layout_height="wrap_content">
            <LinearLayout
+               android:layout_alignParentTop="true"
                android:id="@+id/line1"
                android:orientation="vertical"
                android:layout_width="match_parent"
                android:layout_above="@id/line2"
                android:layout_height="wrap_content">
                <RelativeLayout
+                   android:layout_gravity="top"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
                    <ImageButton
@@ -68,6 +71,7 @@
 
 
                <androidx.recyclerview.widget.RecyclerView
+                   android:background="@android:color/holo_red_light"
                    android:layout_marginTop="20dp"
                    android:layout_width="match_parent"
                    android:id="@+id/recyclerviewCart"
@@ -109,6 +113,7 @@
                        android:textSize="14sp" />
 
                    <TextView
+                       android:id="@+id/txtTotalPrice"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_alignParentRight="true"

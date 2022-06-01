@@ -21,5 +21,11 @@
     <string name="action_create_account">Create Account</string>
     <string name="dic_signup">Already a account? Log in</string>
     <string name="prompt_name">Name</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="option_get_place">Get place</string>
+
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="pick_place">Choose a place</string>
 
 </resources>

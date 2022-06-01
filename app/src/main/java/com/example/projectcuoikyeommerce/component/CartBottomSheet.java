@@ -7,16 +7,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.activity.CheckoutActivity;
 import com.example.projectcuoikyeommerce.adapter.CartAdapter;
+import com.example.projectcuoikyeommerce.constant.KeyIntent;
 import com.example.projectcuoikyeommerce.data_local.DataLocalManager;
 import com.example.projectcuoikyeommerce.dto.CartDto;
 import com.example.projectcuoikyeommerce.dto.ProductCartDto;
@@ -27,6 +31,7 @@ import com.example.projectcuoikyeommerce.presenter.CategoryPresenter;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +45,9 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     private List<ProductCartDto> cartList = new ArrayList<>();
     private CartPresenter presenter;
     private ImageButton btnBuy;
+    private TextView txtTotalPrice;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -53,15 +60,41 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         initUi();
         handleAction();
+        eventRemoveItemProduct();
         initCart();
         return bottomSheetDialog;
+    }
+
+    private void eventRemoveItemProduct() {
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                int position = viewHolder.getAdapterPosition();
+                ProductCartDto cartDto = cartList.get(position);
+                if(presenter.deleteCart(cartDto.getCartEntityId())!= null){
+                    cartList.remove(position);
+                    Toast.makeText(getContext(), "Đã xóa "+ cartDto.getProductEntityName()+" khỏi giỏ hàng", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getContext(), "Lỗi!!!!", Toast.LENGTH_SHORT).show();
+                }
+                cartAdapter.notifyDataSetChanged();
+
+
+            }
+        });
+        itemTouchHelper.attachToRecyclerView(recyclerviewCart);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void initCart() {
         cartList.clear();
         cartList.addAll(presenter.getProduct(DataLocalManager.getInstance().getUser().getId()));
-        ;
 
         cartAdapter = new CartAdapter(cartList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -73,8 +106,18 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
     private void handleAction() {
         btnCancel.setOnClickListener(v -> bottomSheetDialog.dismiss());
         btnBuy.setOnClickListener(b -> {
-            Intent intent = new Intent(getContext(), CheckoutActivity.class);
-            startActivity(intent);
+            List<ProductCartDto> listIntent = presenter.getListCheckout(cartList);
+            if(listIntent.size() > 0){
+                Intent intent = new Intent(getContext(), CheckoutActivity.class);
+                Bundle bundle = new Bundle();
+                Gson gson = new Gson();
+                bundle.putString(KeyIntent.KEY_CHECK_OUT,gson.toJson(listIntent));
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }else{
+                Toast.makeText(getContext(), "Vui lòng chọn sản phẩm", Toast.LENGTH_SHORT).show();
+            }
+
         });
     }
 
@@ -83,6 +126,7 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
         recyclerviewCart = view.findViewById(R.id.recyclerviewCart);
         presenter = new CartPresenter();
         btnBuy = view.findViewById(R.id.btnBuy);
+        txtTotalPrice = view.findViewById(R.id.txtTotalPrice);
 
     }
 
@@ -121,5 +165,11 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
         CartDto cartDto1 = presenter.updateCard(cart);
         cartList.get(position).setCartEntityQuantity(cartDto1.getQuantity());
         cartAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void selectItem(int position, boolean isChecked) {
+        cartList.get(position).setCheck(isChecked);
+        txtTotalPrice.setText(presenter.totalPrice(cartList));
     }
 }

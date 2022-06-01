@@ -41,18 +41,23 @@
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.165625" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout-w936dp/activity_login.xml" value="0.153125" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_category.xml" value="0.33" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_checkout.xml" value="0.22" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_login2.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_main2.xml" value="0.2" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_maps.xml" value="0.12864583333333332" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_product_detail.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_recycler_view_sample.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/cart_bottom_sheet.xml" value="0.25" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/custom_info_contents.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/footer.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_add_new_address.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/header.xml" value="0.33" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/item_address.xml" value="0.12864583333333332" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/item_banner_home.xml" value="0.20416666666666666" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/item_cart.xml" value="0.33" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/item_dicription.xml" value="0.20416666666666666" />
@@ -67,6 +72,7 @@
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/item_types_navigation.xml" value="0.1109375" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/logo.xml" value="0.33" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/layout/menu_bottom_sheet.xml" value="0.22" />
+        <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/menu/current_place_menu.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/ProjectCuoiKyEommerce/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>

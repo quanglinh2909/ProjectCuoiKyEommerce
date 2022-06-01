@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -74,6 +75,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                     cartEvent.inputEditTex(position,Integer.parseInt(holder.edtSum.getText().toString().trim()));
                 }
             }
+        });
+
+        holder.checkbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            cartEvent.selectItem(position,isChecked);
         });
 
     }

@@ -9,6 +9,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -20,6 +21,10 @@ public interface CartController {
 
     @GET("cart/get-by-id-user/{id}")
     Call<List<ProductCartDto>> getProductByIdUser(@Path("id") int id);
+
     @PUT("cart/update")
     Call<CartDto> updateCart(@Body CartDto cart);
+
+    @DELETE("cart/delete/{id}")
+    Call<CartDto> deleteCart(@Path("id") int id);
 }
