@@ -1,35 +1,56 @@
 package com.example.projectcuoikyeommerce.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Banner {
-    private String url;
-    private String description;
 
-    public Banner(String url, String description) {
-        this.url = url;
-        this.description = description;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("linkImage")
+    @Expose
+    private String linkImage;
+    @SerializedName("createdAt")
+    @Expose
+    private String createdAt;
+
+    public Banner(Integer id, String linkImage, String createdAt) {
+        this.id = id;
+        this.linkImage = linkImage;
+        this.createdAt = createdAt;
+     }
+
+    public Integer getId() {
+        return id;
     }
 
-    public String getUrl() {
-        return url;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public String getLinkImage() {
+        return linkImage;
     }
 
-    public String getDescription() {
-        return description;
+    public void setLinkImage(String linkImage) {
+        this.linkImage = linkImage;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
     @Override
     public String toString() {
         return "Banner{" +
-                "url='" + url + '\'' +
-                ", description='" + description + '\'' +
+                "id=" + id +
+                ", linkImage='" + linkImage + '\'' +
+                ", createdAt='" + createdAt + '\'' +
                 '}';
     }
 }

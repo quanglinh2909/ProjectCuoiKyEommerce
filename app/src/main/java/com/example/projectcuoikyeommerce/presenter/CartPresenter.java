@@ -1,0 +1,87 @@
+package com.example.projectcuoikyeommerce.presenter;
+
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.example.projectcuoikyeommerce.api.config.ApiUtils;
+import com.example.projectcuoikyeommerce.component.FormatPrice;
+import com.example.projectcuoikyeommerce.dto.CartDto;
+import com.example.projectcuoikyeommerce.dto.ProductCartDto;
+import com.example.projectcuoikyeommerce.model.Image;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+public class CartPresenter {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<ProductCartDto> getProduct(int id) {
+        List<ProductCartDto> products = new ArrayList<>();
+        try {
+            CompletableFuture<List<ProductCartDto>> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.cart().getProductByIdUser(id).execute().body();
+                } catch (IOException e) {
+                    return products;
+                }
+            });
+
+            return  future.get();
+        } catch (Exception e) {
+            return  products;
+        }
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public CartDto updateCard(CartDto cart) {
+        try {
+            CompletableFuture<CartDto> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.cart().updateCart(cart).execute().body();
+                } catch (IOException e) {
+                    return null;
+                }
+            });
+
+            return  future.get();
+        } catch (Exception e) {
+            return  null;
+        }
+    }
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public CartDto deleteCart(Integer id) {
+        try {
+            CompletableFuture<CartDto> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.cart().deleteCart(id).execute().body();
+                } catch (IOException e) {
+                    return null;
+                }
+            });
+
+            return  future.get();
+        } catch (Exception e) {
+            return  null;
+        }
+    }
+    public String totalPrice(List<ProductCartDto> list){
+        double price = 0;
+        for (ProductCartDto productCartDto: list){
+            if(productCartDto.isCheck()){
+                price += (productCartDto.getProductEntityPrice() * productCartDto.getCartEntityQuantity());
+            }
+        }
+        return FormatPrice.formatPrice(price);
+    }
+    public List<ProductCartDto> getListCheckout(List<ProductCartDto> list){
+        List<ProductCartDto> result  = new ArrayList<>();
+        for (ProductCartDto productCartDto: list){
+            if(productCartDto.isCheck()){
+                result.add(productCartDto);
+            }
+        }
+
+        return result;
+    }
+}

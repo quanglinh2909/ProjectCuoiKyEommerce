@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:layout_alignParentTop="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_alignParentTop="true"
+               android:id="@+id/line1"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_above="@id/line2"
+               android:layout_height="wrap_content">
+               <RelativeLayout
+                   android:layout_gravity="top"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <ImageButton
+                       android:layout_width="24dp"
+                       android:id="@+id/btnCloseCart"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginLeft="16dp"
+                       android:background="@android:color/transparent"
+                       android:src="@drawable/ic_close"
+                       android:scaleType="fitXY"
+                       android:layout_height="24dp">
+
+                   </ImageButton>
+
+                   <TextView
+                       android:layout_marginTop="20dp"
+                       android:layout_centerHorizontal="true"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="CART"
+                       android:textColor="#333333"
+                       android:textFontWeight="600"
+                       android:textSize="20sp"
+                       android:fontFamily="@font/tenor_sans"
+                       android:letterSpacing="0.3"
+                       android:layout_marginLeft="17dp"
+                       />
+               </RelativeLayout>
+               <FrameLayout
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="10dp">
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:src="@drawable/line_top_menu"
+                       android:scaleType="centerCrop"
+                       android:layout_gravity="center"
+                       android:layout_height="1dp">
+
+                   </ImageView>
+                   <ImageView
+                       android:layout_width="10dp"
+                       android:src="@drawable/rectangle_menu_top"
+                       android:scaleType="fitXY"
+                       android:layout_gravity="center"
+                       android:layout_height="10dp">
+
+                   </ImageView>
+               </FrameLayout>
+
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:background="@android:color/holo_red_light"
+                   android:layout_marginTop="20dp"
+                   android:layout_width="match_parent"
+                   android:id="@+id/recyclerviewCart"
+                   android:layout_height="wrap_content">
+
+               </androidx.recyclerview.widget.RecyclerView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/line2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:orientation="vertical">
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginTop="30dp"
+                   android:layout_marginRight="16dp"
+                   android:background="#000000" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="16dp"
+                       android:fontFamily="@font/tenor_sans"
+                       android:text="Sub Total"
+                       android:textColor="#333333"
+                       android:textFontWeight="400"
+                       android:textSize="14sp" />
+
+                   <TextView
+                       android:id="@+id/txtTotalPrice"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginTop="16dp"
+                       android:fontFamily="@font/tenor_sans"
+                       android:text="$240"
+                       android:textColor="#DD8560"
+                       android:textFontWeight="400"
+                       android:textSize="16sp" />
+
+               </RelativeLayout>
+
+               <ImageButton
+                   android:id="@+id/btnBuy"
+                   android:layout_width="match_parent"
+                   android:layout_height="56dp"
+                   android:layout_marginTop="16dp"
+                   android:background="@android:color/transparent"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/ic_buy_now" />
+           </LinearLayout>
+       </RelativeLayout>
+
+
+</RelativeLayout>

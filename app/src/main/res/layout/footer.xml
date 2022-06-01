@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="340dp">
+    <RelativeLayout
+        android:layout_width="162dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="23dp"
+        android:layout_height="24dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_twitter"></ImageView>
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="24dp"
+            android:src="@drawable/ic_instagram"
+            android:scaleType="fitXY"
+            android:layout_height="24dp">
+        </ImageView>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="24dp"
+            android:src="@drawable/ic_youtube"
+            android:scaleType="fitXY"
+            android:layout_height="24dp">
+        </ImageView>
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="26dp"
+        android:id="@+id/underline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/under_line"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="184dp"
+        android:layout_height="30dp"
+        android:text="support@openui.design"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/tenor_sans"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:textColor="#333333">
+
+    </TextView>
+    <TextView
+        android:layout_width="184dp"
+        android:layout_height="30dp"
+        android:text="+60 825 876"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/tenor_sans"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:textColor="#333333">
+
+    </TextView>
+    <TextView
+        android:layout_width="184dp"
+        android:layout_height="30dp"
+        android:text="08:00 - 22:00 - Everyday"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/tenor_sans"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:textColor="#333333">
+
+    </TextView>
+    <RelativeLayout
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="58dp"
+        android:layout_marginRight="58dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="47dp"
+            android:layout_height="24dp"
+            android:text="About"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/tenor_sans"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:textColor="#000000">
+
+        </TextView>
+        <TextView
+            android:layout_width="47dp"
+            android:layout_height="24dp"
+            android:text="Contact"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/tenor_sans"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:textColor="#000000">
+
+        </TextView>
+        <TextView
+            android:layout_width="47dp"
+            android:layout_height="24dp"
+            android:text="Blog"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/tenor_sans"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000">
+
+        </TextView>
+    </RelativeLayout>
+    <TextView
+        android:fontFamily="@font/tenor_sans"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:layout_marginTop="34dp"
+        android:text="Copyright© OpenUI All Rights Reserved."
+        android:layout_width="match_parent"
+        android:background="#1Ac4c4c4"
+        android:layout_height="45dp">
+
+    </TextView>
+
+</LinearLayout>
