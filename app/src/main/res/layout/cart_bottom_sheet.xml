@@ -107,7 +107,7 @@
                        android:layout_height="wrap_content"
                        android:layout_marginTop="16dp"
                        android:fontFamily="@font/tenor_sans"
-                       android:text="Sub Total"
+                       android:text="Tổng tiền"
                        android:textColor="#333333"
                        android:textFontWeight="400"
                        android:textSize="14sp" />
@@ -119,7 +119,7 @@
                        android:layout_alignParentRight="true"
                        android:layout_marginTop="16dp"
                        android:fontFamily="@font/tenor_sans"
-                       android:text="$240"
+                       android:text="0VNĐ"
                        android:textColor="#DD8560"
                        android:textFontWeight="400"
                        android:textSize="16sp" />

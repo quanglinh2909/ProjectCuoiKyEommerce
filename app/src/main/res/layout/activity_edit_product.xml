@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.admin.EditProductActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageButton
+                    android:id="@+id/btnBackAddAddress"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_arrow_back_24_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/tenor_sans"
+                    android:text="Thêm sản Phẩm"
+                    android:textColor="#000000"
+                    android:textFontWeight="400"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_save_24" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/tenor_sans"
+                        android:text="Tên sản phẩm"
+                        android:textColor="@color/grayScale"
+                        android:textFontWeight="400"
+                        android:textSize="16sp" />
+                    <EditText
+                        android:id="@+id/edtNameProduct"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Tên sản phẩm"
+                        android:background="@drawable/back_gound_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Số lượng S"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <EditText
+                            android:id="@+id/edtSLS"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Số lượng X"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <EditText
+                            android:id="@+id/edtSLX"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Số lượng M"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <EditText
+                            android:id="@+id/edtSLM"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Số lượng XL"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <EditText
+                            android:id="@+id/edtSLXL"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/tenor_sans"
+                        android:text="Giá"
+                        android:textColor="@color/grayScale"
+                        android:textFontWeight="400"
+                        android:textSize="16sp" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/back_gound_edit"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:text="0"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Loại"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <RelativeLayout
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Spinner
+                                android:spinnerMode="dialog"
+                                android:id="@+id/spinerLoai"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/tenor_sans"
+                            android:text="Bộ sưu tập"
+                            android:textColor="@color/grayScale"
+                            android:textFontWeight="400"
+                            android:textSize="16sp" />
+                        <RelativeLayout
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/back_gound_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Spinner
+                                android:spinnerMode="dialog"
+                                android:id="@+id/spinerBST"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:background="#E8E8E8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Hình ảnh"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageButton
+                        android:id="@+id/btnSelectImage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_add_circle_outline_24"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:layout_marginRight="16dp"/>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewAddProduct"
+                    android:scrollbarStyle="outsideInset"
+                    android:scrollbars="vertical"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/boxProgressBar"
+            android:background="#B3161c24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ProgressBar>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</androidx.core.widget.NestedScrollView>

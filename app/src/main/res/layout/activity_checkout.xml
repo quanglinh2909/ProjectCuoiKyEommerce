@@ -156,15 +156,15 @@ tools:context=".activity.CheckoutActivity">
             android:id="@+id/recyclerviewCheckout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@+id/underline"
+            android:layout_below="@+id/addressRe"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/underline" />
+            app:layout_constraintTop_toBottomOf="@+id/addressRe" />
 
         <RelativeLayout
             android:id="@+id/relativeTotal"
@@ -182,17 +182,17 @@ tools:context=".activity.CheckoutActivity">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tenor_sans"
-                android:text="Sub Total"
+                android:text="Tổng tiền"
                 android:textColor="#333333"
                 android:textFontWeight="400"
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/txtSubTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/tenor_sans"
-                android:text="$240"
                 android:textColor="#DD8560"
                 android:textFontWeight="400"
                 android:textSize="16sp" />
@@ -220,7 +220,7 @@ tools:context=".activity.CheckoutActivity">
                 android:gravity="center"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
-                android:text="CHECKOUT"
+                android:text="Thanh Toán"
                 android:textColor="@color/white" />
 
             <Button
@@ -234,7 +234,66 @@ tools:context=".activity.CheckoutActivity">
                 />
         </FrameLayout>
 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:id="@+id/addressRe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/underline" >
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_baseline_fmd_good_24" />
+
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ nhận hàng" />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationIcon"
+                android:layout_marginLeft="16dp"
+                android:layout_toLeftOf="@+id/btnAddAddress"
+                android:layout_toRightOf="@+id/locationIcon"
+                android:text="Vui lòng chọn địa chỉ"
+                android:textColor="@android:color/holo_red_light" />
+            <ImageButton
+                android:layout_below="@+id/locationIcon"
+                android:id="@+id/btnAddAddress"
+                android:layout_width="30dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_baseline_navigate_next_24"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <RelativeLayout
+        android:id="@+id/boxProgressBar"
+        android:background="#B3161c24"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ProgressBar>
+    </RelativeLayout>
 </FrameLayout>

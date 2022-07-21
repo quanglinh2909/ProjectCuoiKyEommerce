@@ -27,6 +27,7 @@ public class ProductDetailPresenter {
         try {
             CompletableFuture<List<Image>> future = CompletableFuture.supplyAsync(() -> {
                 try {
+
                     return  ApiUtils.image().getListImage(id).execute().body();
                 } catch (IOException e) {
                     return imageList;

@@ -72,12 +72,13 @@
                   android:layout_height="wrap_content">
 
               </RelativeLayout>
-              <include layout="@layout/footer"
-                  android:layout_below="@id/containerFragment"
-                  android:layout_height="340dp"
+
+              <include
                   android:id="@+id/footer"
-                  android:layout_width="match_parent">
-              </include>
+                  layout="@layout/footer"
+                  android:layout_width="match_parent"
+                  android:layout_height="340dp"
+                  android:layout_below="@id/containerFragment"></include>
           </RelativeLayout>
 
 

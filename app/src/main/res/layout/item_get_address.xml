@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_marginLeft="10dp"
+        android:id="@+id/checkSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textFontWeight="700"
+        android:textColor="#000"
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/txtUpdate"
+        android:text="Vui lòng chọn địa chỉ"
+        android:layout_toRightOf="@id/checkSelect"
+       />
+    <TextView
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/txtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sửa"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light" />
+    <TextView
+        android:layout_toRightOf="@id/checkSelect"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txtLocation"
+        android:id="@+id/txtDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mặc định"
+        android:textColor="@android:color/holo_red_light" />
+    <View
+        android:id="@+id/lineBottom"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txtDefault"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/darker_gray"
+        android:layout_height="0.5dp"/>
+
+</RelativeLayout>

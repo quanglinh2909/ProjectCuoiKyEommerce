@@ -9,5 +9,7 @@ public class FragmentID {
     public static final int FRAGMENT_PRODUCT_DETAIL = 6;
     public static final int FRAGMENT_NOTIFICATION = 7;
     public static final int FRAGMENT_MY = 8;
+    public static final int PRODUCT = 9;
+    public static final int ORDER = 10;
 
 }
