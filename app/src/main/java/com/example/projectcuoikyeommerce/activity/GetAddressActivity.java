@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.adapter.GetAddressAdapter;
@@ -35,7 +36,7 @@ public class GetAddressActivity extends AppCompatActivity implements EventGetAdd
     private FrameLayout containerCheckout;
     private UserInfo mUserInfo;
     private RelativeLayout boxProgressBar;
-    private Button btnAddAddress;
+    private TextView btnAddAddress;
     private ImageButton back_button;
     private ActivityResultLauncher<Intent> activityResultLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),

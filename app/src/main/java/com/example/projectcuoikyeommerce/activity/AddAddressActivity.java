@@ -34,7 +34,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 public class AddAddressActivity extends AppCompatActivity {
-    private Button btnCheckout;
+    private TextView btnCheckout;
     private RelativeLayout btnBoxSelect;
     private TextView txtAddress;
     private Province province, district, ward;

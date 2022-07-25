@@ -35,7 +35,6 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Address address = list.get(position);
-        Log.d("AAA", "onBindViewHolder: "+ address.toString());
         if(address != null){
             String addressLine= address.getAddressLine(0);
 

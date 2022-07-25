@@ -4,8 +4,10 @@ import com.example.projectcuoikyeommerce.api.BannerController;
 import com.example.projectcuoikyeommerce.api.CartController;
 import com.example.projectcuoikyeommerce.api.DescriptionController;
 import com.example.projectcuoikyeommerce.api.ImageController;
+import com.example.projectcuoikyeommerce.api.NotifycationController;
 import com.example.projectcuoikyeommerce.api.OderController;
 import com.example.projectcuoikyeommerce.api.ProductController;
+import com.example.projectcuoikyeommerce.api.SendNotificationController;
 import com.example.projectcuoikyeommerce.api.TagChildController;
 import com.example.projectcuoikyeommerce.api.TagParentController;
 import com.example.projectcuoikyeommerce.api.TrademarkController;
@@ -18,6 +20,9 @@ public class ApiUtils {
     public static final String url = URL.BASE_URL+"api/";
     public static TagParentController tagParent(){
         return ConfigRetrofit.getClient(url).create(TagParentController.class);
+    }
+    public static SendNotificationController notification(){
+        return ConfigRetrofit.getClient("https://fcm.googleapis.com/").create(SendNotificationController.class);
     }
     public static TagChildController tagChild(){
         return ConfigRetrofit.getClient(url).create(TagChildController.class);
@@ -48,5 +53,8 @@ public class ApiUtils {
     }
     public static OderController order(){
         return ConfigRetrofit.getClient(url).create(OderController.class);
+    }
+    public static NotifycationController notifycation(){
+        return ConfigRetrofit.getClient(url).create(NotifycationController.class);
     }
 }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/boxItem"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="#fff"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_item1" />
+
+        <TextView
+            android:id="@+id/txtNameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/imgProduct"
+            android:fontFamily="@font/tenor_sans"
+            android:text="Tai nghe fox"
+            android:textColor="#000"
+            android:textFontWeight="600"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/tenor_sans"
+            android:text="100,000đ"
+            android:textColor="#EF1616" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/grayScale"/>
+    <RelativeLayout
+        android:layout_marginLeft="6dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTotalProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tenor_sans"
+            android:text="1 sản phẩm"
+            android:textColor="@color/grayScale" />
+
+        <TextView
+            android:id="@+id/txtThanhTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/txtTotalPrice"
+            android:fontFamily="@font/tenor_sans"
+            android:text="Thành tiền: "
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/txtTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/tenor_sans"
+            android:text="100,000đ"
+            android:textColor="#EF1616" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="2.3dp"
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/grayScale"/>
+</LinearLayout>

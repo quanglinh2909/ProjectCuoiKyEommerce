@@ -8,13 +8,23 @@ public class ArrayListOrder {
     private List<ProductCartDto> oderList;
     private String idUser;
     private String idAddress;
+    private String nameUser;
     private double total;
 
-    public ArrayListOrder(List<ProductCartDto> oderList, String idUser, String idAddress, double total) {
+    public ArrayListOrder(List<ProductCartDto> oderList, String idUser, String idAddress, double total,String nameUser) {
         this.oderList = oderList;
         this.idUser = idUser;
         this.idAddress = idAddress;
         this.total = total;
+        this.nameUser = nameUser;
+    }
+
+    public String getNameUser() {
+        return nameUser;
+    }
+
+    public void setNameUser(String nameUser) {
+        this.nameUser = nameUser;
     }
 
     public List<ProductCartDto> getOderList() {

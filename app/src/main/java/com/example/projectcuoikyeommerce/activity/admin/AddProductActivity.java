@@ -21,6 +21,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +38,7 @@ import android.widget.Toast;
 import com.example.projectcuoikyeommerce.R;
 import com.example.projectcuoikyeommerce.activity.MainActivity;
 import com.example.projectcuoikyeommerce.adapter.admin.AddproductAdapter;
+import com.example.projectcuoikyeommerce.adapter.admin.OrderAdminAdapter;
 import com.example.projectcuoikyeommerce.adapter.admin.SpinnerBSTAdapter;
 import com.example.projectcuoikyeommerce.adapter.admin.SpinnerTypeAdapter;
 import com.example.projectcuoikyeommerce.api.config.ApiUtils;
@@ -44,6 +46,7 @@ import com.example.projectcuoikyeommerce.component.GridSpacingItemDecoration;
 import com.example.projectcuoikyeommerce.component.RealPathUtil;
 import com.example.projectcuoikyeommerce.dto.DataUpload;
 import com.example.projectcuoikyeommerce.dto.ProductUpload;
+import com.example.projectcuoikyeommerce.fragment.admin.OrderAdminFragment;
 import com.example.projectcuoikyeommerce.model.Branch;
 import com.example.projectcuoikyeommerce.model.FileUload;
 import com.example.projectcuoikyeommerce.model.Image;
@@ -156,51 +159,57 @@ public class AddProductActivity extends AppCompatActivity implements AddproductA
             @Override
             public void onClick(View v) {
                 boxProgressBar.setVisibility(View.VISIBLE);
-                String name = edtNameProduct.getText().toString().trim();
-                String s = edtSLS.getText().toString().trim();
-                String x = edtSLX.getText().toString().trim();
-                String m = edtSLM.getText().toString().trim();
-                String xl = edtSLXL.getText().toString().trim();
-                String c = edtPrice.getText().toString().trim();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        String name = edtNameProduct.getText().toString().trim();
+                        String s = edtSLS.getText().toString().trim();
+                        String x = edtSLX.getText().toString().trim();
+                        String m = edtSLM.getText().toString().trim();
+                        String xl = edtSLXL.getText().toString().trim();
+                        String c = edtPrice.getText().toString().trim();
 
-                try {
-                    int sizeS = Integer.parseInt(s);
-                    int sizeX = Integer.parseInt(x);
-                    int sizeM = Integer.parseInt(m);
-                    int sizeXL = Integer.parseInt(xl);
-                    int price = Integer.parseInt(c);
+                        try {
+                            int sizeS = Integer.parseInt(s);
+                            int sizeX = Integer.parseInt(x);
+                            int sizeM = Integer.parseInt(m);
+                            int sizeXL = Integer.parseInt(xl);
+                            int price = Integer.parseInt(c);
 
-                    if (sizeS < 0 || sizeM < 0 || sizeX < 0 || sizeXL < 0 || price < 0) {
-                        boxProgressBar.setVisibility(View.GONE);
-                        Toast.makeText(AddProductActivity.this, "Vui lòng nhập số lớn hơn 0", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                            if (sizeS < 0 || sizeM < 0 || sizeX < 0 || sizeXL < 0 || price < 0) {
+                                boxProgressBar.setVisibility(View.GONE);
+                                Toast.makeText(AddProductActivity.this, "Vui lòng nhập số lớn hơn 0", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
 
-                    if (name.isEmpty()) {
-                        boxProgressBar.setVisibility(View.GONE);
-                        edtNameProduct.setHintTextColor(Color.RED);
-                        Toast.makeText(AddProductActivity.this, "Vui lòng nhập Tên sản phẩm", Toast.LENGTH_SHORT).show();
-                        return;
+                            if (name.isEmpty()) {
+                                boxProgressBar.setVisibility(View.GONE);
+                                edtNameProduct.setHintTextColor(Color.RED);
+                                Toast.makeText(AddProductActivity.this, "Vui lòng nhập Tên sản phẩm", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            if (uriList.size() <= 0) {
+                                boxProgressBar.setVisibility(View.GONE);
+                                Toast.makeText(AddProductActivity.this, "Vui lòng chọn hình ảnh", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            ProductUpload product = new ProductUpload(name, price, sizeS, sizeM, sizeX, sizeXL, idBST, idType);
+                            List<FileUload> fileUloads = addproductPresenter.uploadImage(uriList);
+                            List<Image> imageList = new ArrayList<>();
+                            for (FileUload f : fileUloads) {
+                                imageList.add(new Image(f.getPath()));
+                            }
+                            DataUpload dataUpload = new DataUpload(product, imageList);
+                            Product p = addproductPresenter.create(dataUpload);
+                            Toast.makeText(AddProductActivity.this, "Thanh cong", Toast.LENGTH_SHORT).show();
+                            boxProgressBar.setVisibility(View.GONE);
+                        } catch (Exception e) {
+                            boxProgressBar.setVisibility(View.GONE);
+                            Toast.makeText(AddProductActivity.this, "Vui lòng nhập đúng định dạng", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    if (uriList.size() <= 0) {
-                        boxProgressBar.setVisibility(View.GONE);
-                        Toast.makeText(AddProductActivity.this, "Vui lòng chọn hình ảnh", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    ProductUpload product = new ProductUpload(name, price, sizeS, sizeM, sizeX, sizeXL, idBST, idType);
-                    List<FileUload> fileUloads = addproductPresenter.uploadImage(uriList);
-                    List<Image> imageList = new ArrayList<>();
-                    for (FileUload f : fileUloads) {
-                        imageList.add(new Image(f.getPath()));
-                    }
-                    DataUpload dataUpload = new DataUpload(product, imageList);
-                    Product p = addproductPresenter.create(dataUpload);
-                    Toast.makeText(AddProductActivity.this, "Thanh cong", Toast.LENGTH_SHORT).show();
-                    boxProgressBar.setVisibility(View.GONE);
-                } catch (Exception e) {
-                    boxProgressBar.setVisibility(View.GONE);
-                    Toast.makeText(AddProductActivity.this, "Vui lòng nhập đúng định dạng", Toast.LENGTH_SHORT).show();
-                }
+                }, 1000);
+
 
             }
         });

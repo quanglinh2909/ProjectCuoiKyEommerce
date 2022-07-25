@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.projectcuoikyeommerce">
+    package="com.example.projectcuoikyeommerce" >
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission to write to external storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -20,23 +20,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectCuoiKyEommerce"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".activity.OrderActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.admin.DetailOrderActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.admin.EditProductActivity"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activity.admin.AddProductActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activity.admin.DashBoardActivity"
-            android:exported="true">  <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="false" >
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity
             android:name=".activity.GetAddressActivity"
             android:exported="false" />
@@ -76,14 +92,12 @@
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false">
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity.SignUpActivity"

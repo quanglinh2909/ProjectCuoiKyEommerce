@@ -1,6 +1,7 @@
 package com.example.projectcuoikyeommerce.api;
 
 import com.example.projectcuoikyeommerce.dto.DataUpload;
+import com.example.projectcuoikyeommerce.dto.ProductDto;
 import com.example.projectcuoikyeommerce.dto.ProductUpload;
 import com.example.projectcuoikyeommerce.model.Banner;
 import com.example.projectcuoikyeommerce.model.FileUload;
@@ -24,6 +25,9 @@ import retrofit2.http.Path;
 public interface ProductController {
     @GET("image/get-by-id-tag-parent/{id}")
     Call<List<Image>> getListProductByTagParent(@Path("id") int id);
+
+    @GET("product/search/{key}")
+    Call<List<ProductDto>> search(@Path("key") String key);
 
     @GET("product/get-by-id/{id}")
     Call<Product> getProductById(@Path("id") String id);

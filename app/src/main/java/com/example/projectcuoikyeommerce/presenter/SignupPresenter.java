@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.example.projectcuoikyeommerce.activity.LoginActivity;
 import com.example.projectcuoikyeommerce.api.config.ApiUtils;
+import com.example.projectcuoikyeommerce.data_local.DataLocalManager;
 import com.example.projectcuoikyeommerce.model.User;
 
 import java.util.regex.Matcher;
@@ -27,7 +28,7 @@ public class SignupPresenter {
             Toast.makeText(mContext, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
         }else {
             if(validate(email)){
-                User user = new User(name,email,pass);
+                User user = new User(name,email,pass, DataLocalManager.getInstance().getToken());
                 ApiUtils.user().createUser(user).enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_baseline_comments_disabled_24"
+        android:id="@+id/choXacNhan"
+        android:title="Chờ xác nhận" />
+    <item
+        android:icon="@drawable/ic_baseline_departure_board_24"
+        android:id="@+id/dangGiao"
+        android:title="Đang giao" />
+    <item
+        android:icon="@drawable/ic_baseline_clean_hands_24"
+        android:id="@+id/daGiao"
+        android:title="Đã giao" />
+
+    <item
+        android:icon="@drawable/ic_baseline_free_cancellation_24"
+        android:id="@+id/daHuy"
+        android:title="Đã hủy" />
+
+</menu>

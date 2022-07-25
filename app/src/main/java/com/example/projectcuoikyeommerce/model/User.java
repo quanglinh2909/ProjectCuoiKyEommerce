@@ -18,6 +18,18 @@ public class User {
     @Expose
     private Integer id;
 
+    @SerializedName("token")
+    @Expose
+    private String token;
+
+    @SerializedName("role")
+    @Expose
+    private Integer role;
+
+    public Integer getRole() {
+        return role;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -50,19 +62,18 @@ public class User {
         this.id = id;
     }
 
-    public User(String userName, String email, String password) {
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public User(String userName, String email, String password, String token) {
         this.userName = userName;
         this.email = email;
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        this.token = token;
     }
 }

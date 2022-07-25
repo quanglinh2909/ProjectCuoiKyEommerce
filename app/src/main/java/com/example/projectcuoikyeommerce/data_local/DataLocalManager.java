@@ -31,4 +31,10 @@ public class DataLocalManager {
         User user = gson.fromJson(jsonUser,User.class);
         return  user;
     }
+    public void setToken(String token){
+        instance.mySharedPreferences.putStringValue(SharedPreferencesKey.KEY_TOKEN,token);
+    }
+    public String getToken(){
+       return instance.mySharedPreferences.getStringValue(SharedPreferencesKey.KEY_TOKEN);
+    }
 }

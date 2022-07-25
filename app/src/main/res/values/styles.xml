@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">#787878</item>-->
+<!--        <item name="colorPrimaryDark">@color/color_order</item>-->
+<!--        <item name="colorAccent">@color/grayScale</item>-->
+<!--        <item name="android:statusBarColor">@color/design_default_color_primary</item>-->
+<!--    </style>-->
     <style name="EditTextWhite">
         <item name="android:textColorHint">#787878</item>
         <item name="android:textColor">@color/white</item>

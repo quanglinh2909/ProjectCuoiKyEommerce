@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/boxToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnCloseSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close" />
+
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btnCloseSearch"
+            android:background="#E8E8E8">
+
+            <ImageView
+                android:id="@+id/iconSearch"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_search_24" />
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iconSearch"
+                android:background="@android:color/transparent"
+                android:hint="Tìm Kiếm..."
+                android:padding="8dp"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/line1"
+        android:layout_below="@id/boxToolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/line_top_menu"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_height="1dp">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="10dp"
+            android:src="@drawable/rectangle_menu_top"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:layout_height="10dp">
+
+        </ImageView>
+    </FrameLayout>
+    <ProgressBar
+        android:layout_below="@id/line1"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>

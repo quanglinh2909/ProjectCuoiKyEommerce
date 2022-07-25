@@ -12,10 +12,12 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,6 +35,7 @@ import com.example.projectcuoikyeommerce.component.FormatPrice;
 import com.example.projectcuoikyeommerce.component.GridSpacingItemDecoration;
 import com.example.projectcuoikyeommerce.component.RealPathUtil;
 import com.example.projectcuoikyeommerce.constant.KeyIntent;
+import com.example.projectcuoikyeommerce.dto.DataUpload;
 import com.example.projectcuoikyeommerce.dto.ImageUpload;
 import com.example.projectcuoikyeommerce.dto.ProductUpload;
 import com.example.projectcuoikyeommerce.model.Branch;
@@ -54,7 +57,7 @@ import okhttp3.RequestBody;
 
 public class EditProductActivity extends AppCompatActivity implements EditproductAdapter.EventAddProduct {
     private RecyclerView recyclerView;
-    private ImageButton btnSelectImage, btnSave,btnBackAddAddress;
+    private ImageButton btnSelectImage, btnSave, btnBackAddAddress;
     private EditproductAdapter addproductAdapter;
     private AddproductPresenter addproductPresenter;
     private EditText edtNameProduct, edtSLS, edtSLX, edtSLM, edtSLXL, edtPrice;
@@ -77,7 +80,7 @@ public class EditProductActivity extends AppCompatActivity implements Editproduc
         setContentView(R.layout.activity_edit_product);
 
         Intent intent = getIntent();
-        if(intent.hasExtra(KeyIntent.KEY_PRODUCT_ID)){
+        if (intent.hasExtra(KeyIntent.KEY_PRODUCT_ID)) {
             idProduct = intent.getStringExtra(KeyIntent.KEY_PRODUCT_ID);
         }
 
@@ -86,8 +89,9 @@ public class EditProductActivity extends AppCompatActivity implements Editproduc
         imageList = productDetailPresenter.getListImage(idProduct);
         initUi();
         actionEvent();
-        initData();
         initSpinner();
+        initData();
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -121,6 +125,9 @@ public class EditProductActivity extends AppCompatActivity implements Editproduc
             }
         });
     }
+
+
+
 
     private void initData() {
         for (Image image : imageList) {
@@ -179,41 +186,47 @@ public class EditProductActivity extends AppCompatActivity implements Editproduc
             @Override
             public void onClick(View v) {
                 boxProgressBar.setVisibility(View.VISIBLE);
-                String name = edtNameProduct.getText().toString().trim();
-                String s = edtSLS.getText().toString().trim();
-                String x = edtSLX.getText().toString().trim();
-                String m = edtSLM.getText().toString().trim();
-                String xl = edtSLXL.getText().toString().trim();
-                String c = edtPrice.getText().toString().trim();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        String name = edtNameProduct.getText().toString().trim();
+                        String s = edtSLS.getText().toString().trim();
+                        String x = edtSLX.getText().toString().trim();
+                        String m = edtSLM.getText().toString().trim();
+                        String xl = edtSLXL.getText().toString().trim();
+                        String c = edtPrice.getText().toString().trim();
 
-                try {
-                    int sizeS = Integer.parseInt(s);
-                    int sizeX = Integer.parseInt(x);
-                    int sizeM = Integer.parseInt(m);
-                    int sizeXL = Integer.parseInt(xl);
-                    int price = Integer.parseInt(c);
+                        try {
+                            int sizeS = Integer.parseInt(s);
+                            int sizeX = Integer.parseInt(x);
+                            int sizeM = Integer.parseInt(m);
+                            int sizeXL = Integer.parseInt(xl);
+                            int price = Integer.parseInt(c);
 
-                    if (sizeS < 0 || sizeM < 0 || sizeX < 0 || sizeXL < 0 || price < 0) {
-                        boxProgressBar.setVisibility(View.GONE);
-                        Toast.makeText(EditProductActivity.this, "Vui lòng nhập số lớn hơn 0", Toast.LENGTH_SHORT).show();
-                        return;
+                            if (sizeS < 0 || sizeM < 0 || sizeX < 0 || sizeXL < 0 || price < 0) {
+                                boxProgressBar.setVisibility(View.GONE);
+                                Toast.makeText(EditProductActivity.this, "Vui lòng nhập số lớn hơn 0", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
+                            if (name.isEmpty()) {
+                                boxProgressBar.setVisibility(View.GONE);
+                                edtNameProduct.setHintTextColor(Color.RED);
+                                Toast.makeText(EditProductActivity.this, "Vui lòng nhập Tên sản phẩm", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
+                            ProductUpload product = new ProductUpload(mProduct.getId(), name, price, sizeS, sizeM, sizeX, sizeXL, idBST, idType);
+                            addproductPresenter.update(product);
+                            Toast.makeText(EditProductActivity.this, "Thanh cong", Toast.LENGTH_SHORT).show();
+                            boxProgressBar.setVisibility(View.GONE);
+                        } catch (Exception e) {
+                            boxProgressBar.setVisibility(View.GONE);
+                            Toast.makeText(EditProductActivity.this, "Vui lòng nhập đúng định dạng", Toast.LENGTH_SHORT).show();
+                        }
                     }
+                }, 1000);
 
-                    if (name.isEmpty()) {
-                        boxProgressBar.setVisibility(View.GONE);
-                        edtNameProduct.setHintTextColor(Color.RED);
-                        Toast.makeText(EditProductActivity.this, "Vui lòng nhập Tên sản phẩm", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-
-                    ProductUpload product = new ProductUpload(mProduct.getId(), name, price, sizeS, sizeM, sizeX, sizeXL, idBST, idType);
-                    addproductPresenter.update(product);
-                    Toast.makeText(EditProductActivity.this, "Thanh cong", Toast.LENGTH_SHORT).show();
-                    boxProgressBar.setVisibility(View.GONE);
-                } catch (Exception e) {
-                    boxProgressBar.setVisibility(View.GONE);
-                    Toast.makeText(EditProductActivity.this, "Vui lòng nhập đúng định dạng", Toast.LENGTH_SHORT).show();
-                }
 
             }
         });
@@ -285,7 +298,7 @@ public class EditProductActivity extends AppCompatActivity implements Editproduc
                     List<FileUload> fileUloads = addproductPresenter.uploadImage(listUri);
                     List<ImageUpload> imageList = new ArrayList<>();
                     for (FileUload f : fileUloads) {
-                        imageList.add(new ImageUpload( mProduct.getId(),f.getPath()));
+                        imageList.add(new ImageUpload(mProduct.getId(), f.getPath()));
                     }
                     addproductPresenter.createImage(imageList);
                     addproductAdapter.notifyDataSetChanged();
