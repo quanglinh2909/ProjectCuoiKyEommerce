@@ -96,7 +96,7 @@ public class CartBottomSheet extends BottomSheetDialogFragment implements CartEv
         cartList.clear();
         cartList.addAll(presenter.getProduct(DataLocalManager.getInstance().getUser().getId()));
 
-        cartAdapter = new CartAdapter(cartList, this);
+        cartAdapter = new CartAdapter(cartList, this,0);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerviewCart.setLayoutManager(linearLayoutManager);

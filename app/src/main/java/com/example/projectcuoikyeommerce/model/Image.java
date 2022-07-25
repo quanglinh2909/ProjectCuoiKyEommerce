@@ -44,6 +44,12 @@ public class Image {
         this.product = product;
     }
 
+    public Image(String url) {
+        this.url = url;
+    }
+
+
+
     @Override
     public String toString() {
         return "Image{" +

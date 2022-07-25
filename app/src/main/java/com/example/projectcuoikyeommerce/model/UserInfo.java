@@ -1,55 +1,67 @@
 package com.example.projectcuoikyeommerce.model;
 
-public class UserInfo {
-    private String id;
-    private String idUser;
-    private int age;
-    // gioi tinh 0 la nam, nu la 1
-    private boolean sex;
-    private String telephone;
-    private String firstName;
-    private String lastName;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-    public UserInfo(String id, String idUser, int age, boolean sex, String telephone, String firstName, String lastName) {
-        this.id = id;
+import java.io.Serializable;
+import java.util.Objects;
+
+public class UserInfo implements Serializable {
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("idUser")
+    @Expose
+    private Integer idUser;
+    @SerializedName("telephone")
+    @Expose
+    private String telephone;
+    @SerializedName("fullName")
+    @Expose
+    private String fullName;
+    @SerializedName("address")
+    @Expose
+    private String address;
+    @SerializedName("province")
+    @Expose
+    private String province;
+    @SerializedName("district")
+    @Expose
+    private String district;
+    @SerializedName("ward")
+    @Expose
+    private String ward;
+    @SerializedName("typeAddress")
+    @Expose
+    private String typeAddress;
+    @SerializedName("default")
+    @Expose
+    private Integer _default;
+    @SerializedName("sex")
+    @Expose
+    private Integer sex;
+
+    public UserInfo(Integer idUser, String telephone, String fullName, String address,
+                     String province, String district, String ward, String typeAddress,
+                     Integer _default, Integer sex) {
         this.idUser = idUser;
-        this.age = age;
-        this.sex = sex;
         this.telephone = telephone;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fullName = fullName;
+        this.address = address;
+        this.province = province;
+        this.district = district;
+        this.ward = ward;
+        this.typeAddress = typeAddress;
+        this._default = _default;
+        this.sex = sex;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isSex() {
-        return sex;
-    }
-
-    public void setSex(boolean sex) {
-        this.sex = sex;
     }
 
     public String getTelephone() {
@@ -60,32 +72,96 @@ public class UserInfo {
         this.telephone = telephone;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getAddress() {
+        return address;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getWard() {
+        return ward;
+    }
+
+    public void setWard(String ward) {
+        this.ward = ward;
+    }
+
+    public String getTypeAddress() {
+        return typeAddress;
+    }
+
+    public void setTypeAddress(String typeAddress) {
+        this.typeAddress = typeAddress;
+    }
+
+    public Integer getDefault() {
+        return _default;
+    }
+
+    public void setDefault(Integer _default) {
+        this._default = _default;
+    }
+
+    public Integer getSex() {
+        return sex;
+    }
+
+    public void setSex(Integer sex) {
+        this.sex = sex;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserInfo userInfo = (UserInfo) o;
+        return Objects.equals(id, userInfo.id) && Objects.equals(idUser, userInfo.idUser) && Objects.equals(telephone, userInfo.telephone) && Objects.equals(fullName, userInfo.fullName) && Objects.equals(address, userInfo.address) && Objects.equals(province, userInfo.province) && Objects.equals(district, userInfo.district) && Objects.equals(ward, userInfo.ward) && Objects.equals(typeAddress, userInfo.typeAddress) && Objects.equals(_default, userInfo._default) && Objects.equals(sex, userInfo.sex);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, idUser, telephone, fullName, address, province, district, ward, typeAddress, _default, sex);
     }
 
     @Override
     public String toString() {
         return "UserInfo{" +
-                "id='" + id + '\'' +
-                ", idUser='" + idUser + '\'' +
-                ", age=" + age +
-                ", sex=" + sex +
+                "id=" + id +
                 ", telephone='" + telephone + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", address='" + address + '\'' +
+                ", province='" + province + '\'' +
+                ", district='" + district + '\'' +
+                ", ward='" + ward + '\'' +
+                ", typeAddress='" + typeAddress + '\'' +
+                ", _default=" + _default +
+                ", sex=" + sex +
                 '}';
     }
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/boxItem"
+    android:background="#F4F3F3"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_store_24" />
+
+        <TextView
+            android:id="@+id/txtNameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/imgProduct"
+            android:fontFamily="@font/tenor_sans"
+            android:text="Tai nghe fox"
+            android:textColor="#000"
+            android:textFontWeight="600"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNameProduct"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_toRightOf="@id/imgProduct"
+            android:fontFamily="@font/tenor_sans"
+            android:text="100,000đ"
+            android:textColor="#000" />
+        <ImageButton
+            android:id="@+id/btnAddAddress"
+            android:layout_width="30dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            android:layout_height="30dp"/>
+        <View
+            android:layout_alignParentBottom="true"
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/grayScale"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -29,10 +29,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private List<ProductCartDto> cartList;
     private CartEvent cartEvent;
     private Context mContext;
+    private int type;
 
-    public CartAdapter(List<ProductCartDto> cartList, CartEvent cartEvent) {
+    public CartAdapter(List<ProductCartDto> cartList, CartEvent cartEvent,int type) {
         this.cartList = cartList;
         this.cartEvent = cartEvent;
+        this.type = type;
     }
 
     @NonNull
@@ -80,6 +82,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         holder.checkbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             cartEvent.selectItem(position,isChecked);
         });
+        if(type == 1){
+            holder.checkbox.setVisibility(View.GONE);
+            holder.btnIncrease.setEnabled(false);
+            holder.reduced.setEnabled(false);
+            holder.edtSum.setEnabled(false);
+        }
 
     }
 

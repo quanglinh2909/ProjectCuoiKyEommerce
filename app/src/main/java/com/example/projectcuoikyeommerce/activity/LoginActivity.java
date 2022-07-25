@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.projectcuoikyeommerce.R;
+import com.example.projectcuoikyeommerce.activity.admin.DashBoardActivity;
 import com.example.projectcuoikyeommerce.data_local.DataLocalManager;
 import com.example.projectcuoikyeommerce.model.User;
 import com.example.projectcuoikyeommerce.presenter.LoginPresenter;
@@ -27,9 +28,16 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         User user = DataLocalManager.getInstance().getUser();
         if(user != null){
-           Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-           startActivity(intent);
-           finishAffinity();
+          if(user.getRole() == 0){
+              Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+              startActivity(intent);
+              finishAffinity();
+          }
+            if(user.getRole() == 1){
+                Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+                startActivity(intent);
+                finishAffinity();
+            }
 
         }
         initUI();

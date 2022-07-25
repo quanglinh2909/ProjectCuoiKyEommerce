@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.ProjectCuoiKyEommerce" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.ProjectCuoiKyEommerce" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimary">#DF4D1F</item>
+        <item name="colorButtonNormal">#FFF</item>
+
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->

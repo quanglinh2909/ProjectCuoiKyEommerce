@@ -19,15 +19,16 @@
                    android:layout_gravity="top"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content">
+
                    <ImageButton
-                       android:layout_width="24dp"
                        android:id="@+id/btnCloseCart"
-                       android:layout_marginTop="20dp"
+                       android:layout_width="24dp"
+                       android:layout_height="24dp"
                        android:layout_marginLeft="16dp"
+                       android:layout_marginTop="20dp"
                        android:background="@android:color/transparent"
-                       android:src="@drawable/ic_close"
                        android:scaleType="fitXY"
-                       android:layout_height="24dp">
+                       android:src="@drawable/ic_close">
 
                    </ImageButton>
 
@@ -107,7 +108,7 @@
                        android:layout_height="wrap_content"
                        android:layout_marginTop="16dp"
                        android:fontFamily="@font/tenor_sans"
-                       android:text="Sub Total"
+                       android:text="Tổng tiền"
                        android:textColor="#333333"
                        android:textFontWeight="400"
                        android:textSize="14sp" />
@@ -119,7 +120,7 @@
                        android:layout_alignParentRight="true"
                        android:layout_marginTop="16dp"
                        android:fontFamily="@font/tenor_sans"
-                       android:text="$240"
+                       android:text="0VNĐ"
                        android:textColor="#DD8560"
                        android:textFontWeight="400"
                        android:textSize="16sp" />

@@ -115,6 +115,7 @@ public class Product {
         this.idParent = idParent;
     }
 
+
     public Product(String id, String name, Integer price, Integer s, Integer m, Integer l, Integer xl, Branch idlocalbranch, Collection idColection, TagParent idParent) {
         this.id = id;
         this.name = name;

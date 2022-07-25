@@ -1,22 +1,23 @@
 package com.example.projectcuoikyeommerce.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.sql.Date;
 
 public class Oder {
+    @SerializedName("id")
+    @Expose
     private String id;
-    private User user;
-    // .....
-    private int status;
-    private Date oderDate;
-    private double total;
-
-    public Oder(String id, User user, int status, Date oderDate, double total) {
-        this.id = id;
-        this.user = user;
-        this.status = status;
-        this.oderDate = oderDate;
-        this.total = total;
-    }
+    @SerializedName("total")
+    @Expose
+    private Integer total;
+    @SerializedName("status")
+    @Expose
+    private Integer status;
+    @SerializedName("oderDate")
+    @Expose
+    private String oderDate;
 
     public String getId() {
         return id;
@@ -26,46 +27,27 @@ public class Oder {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public Date getOderDate() {
-        return oderDate;
-    }
-
-    public void setOderDate(Date oderDate) {
-        this.oderDate = oderDate;
-    }
-
-    public double getTotal() {
+    public Integer getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(Integer total) {
         this.total = total;
     }
 
-    @Override
-    public String toString() {
-        return "Oder{" +
-                "id='" + id + '\'' +
-                ", user=" + user +
-                ", status=" + status +
-                ", oderDate=" + oderDate +
-                ", total=" + total +
-                '}';
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public String getOderDate() {
+        return oderDate;
+    }
+
+    public void setOderDate(String oderDate) {
+        this.oderDate = oderDate;
     }
 }

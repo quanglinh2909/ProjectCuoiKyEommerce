@@ -14,6 +14,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -64,6 +65,7 @@ public class ProductDetailActivity extends AppCompatActivity implements ProductD
     private List<Image> imageList = new ArrayList<>();
     private String idProduct = "";
     private Product product;
+    private RelativeLayout boxProgressBar;
 
     private ProductDetailPresenter presenter;
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -89,8 +91,13 @@ public class ProductDetailActivity extends AppCompatActivity implements ProductD
         btnBack.setOnClickListener(v -> finish());
         btnAddCart.setOnClickListener(v -> {
           User user = DataLocalManager.getInstance().getUser();
-          boolean check = false;
-            for ( Size size: listSize) {
+            boxProgressBar.setVisibility(View.VISIBLE);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    boolean check = false;
+
+                    for ( Size size: listSize) {
                 if(size.isCheck()){
                     CartDto cart = new CartDto(user.getId(),idProduct,1, size.getName());
                     presenter.insertCard(cart) ;
@@ -98,11 +105,14 @@ public class ProductDetailActivity extends AppCompatActivity implements ProductD
                 }
 
             }
-            if(check){
-                Toast.makeText(this, "Thêm vào giỏ hàng thành công", Toast.LENGTH_SHORT).show();
+                    boxProgressBar.setVisibility(View.GONE);
+                    if(check){
+                Toast.makeText(getApplicationContext(), "Thêm vào giỏ hàng thành công", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "Vui long chon size", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Vui lòng chọn size", Toast.LENGTH_SHORT).show();
             }
+                }
+            }, 500);
 
         });
     }
@@ -178,6 +188,7 @@ public class ProductDetailActivity extends AppCompatActivity implements ProductD
         txtPriceProduct =findViewById(R.id.txtPriceProduct);
         txtNameProduct =findViewById(R.id.txtNameProduct);
         circleIndicatorDetail =findViewById(R.id.circleIndicatorDetail);
+        boxProgressBar =findViewById(R.id.boxProgressBar);
 //        recyclerViewColor = findViewById(R.id.recyclerViewColor);
         recyclerViewSize = findViewById(R.id.recyclerViewSize);
         recyclerviewDicription = findViewById(R.id.recyclerviewDicription);
