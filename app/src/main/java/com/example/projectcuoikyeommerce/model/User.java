@@ -26,6 +26,10 @@ public class User {
     @Expose
     private Integer role;
 
+    public void setRole(Integer role) {
+        this.role = role;
+    }
+
     public Integer getRole() {
         return role;
     }
@@ -75,5 +79,17 @@ public class User {
         this.email = email;
         this.password = password;
         this.token = token;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                ", token='" + token + '\'' +
+                ", role=" + role +
+                '}';
     }
 }

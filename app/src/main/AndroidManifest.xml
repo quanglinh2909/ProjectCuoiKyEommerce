@@ -22,6 +22,9 @@
         android:theme="@style/Theme.ProjectCuoiKyEommerce"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.EditUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.HelpActivity"
             android:exported="false" />
         <activity
