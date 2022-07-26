@@ -85,12 +85,12 @@ public class MyFragment extends Fragment {
         });
 
         boxTroGiup.setOnClickListener(v -> {
-            Intent intent = new Intent(mView.getContext(), AboutActivity.class);
+            Intent intent = new Intent(mView.getContext(), HelpActivity.class);
             mView.getContext().startActivity(intent);
         });
 
         boxThongTin.setOnClickListener(v -> {
-            Intent intent = new Intent(mView.getContext(), HelpActivity.class);
+            Intent intent = new Intent(mView.getContext(), AboutActivity.class);
             mView.getContext().startActivity(intent);
         });
         boxThietLapTaiKhoan.setOnClickListener(v -> {

@@ -23,7 +23,7 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about);
         initUI();
         loadView();
     }
@@ -32,9 +32,7 @@ public class AboutActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.time_line_list);
     }
     private void loadView(){
-
         List<TimeLine> list=createTimeLine();
-        Log.d("SIZE", list.size()+"");
         TimeLineAdapter adapter=new TimeLineAdapter(list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
