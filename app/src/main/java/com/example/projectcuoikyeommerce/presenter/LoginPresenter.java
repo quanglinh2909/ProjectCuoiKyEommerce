@@ -12,7 +12,9 @@ import com.example.projectcuoikyeommerce.activity.MainActivity;
 import com.example.projectcuoikyeommerce.activity.admin.DashBoardActivity;
 import com.example.projectcuoikyeommerce.api.config.ApiUtils;
 import com.example.projectcuoikyeommerce.data_local.DataLocalManager;
+import com.example.projectcuoikyeommerce.dto.ArrayListOrder;
 import com.example.projectcuoikyeommerce.dto.OrderAdminDto;
+import com.example.projectcuoikyeommerce.model.Oder;
 import com.example.projectcuoikyeommerce.model.User;
 
 import java.io.IOException;
@@ -26,7 +28,23 @@ import retrofit2.Response;
 
 public class LoginPresenter {
     public Activity activity;
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public User createUser(String name, String pass, String email) {
+        User user = new User(name,email,pass, DataLocalManager.getInstance().getToken());
+        try {
+            CompletableFuture<User> future = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return  ApiUtils.user().loginGoogle(user).execute().body();
+                } catch (IOException e) {
+                    return null;
+                }
+            });
 
+            return  future.get();
+        } catch (Exception e) {
+            return  null;
+        }
+    }
 
     public LoginPresenter(Activity activity) {
         this.activity = activity;

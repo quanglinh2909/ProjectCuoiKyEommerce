@@ -144,6 +144,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
+                            android:id="@+id/btnCHoXacNhan"
                             android:layout_gravity="center"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
@@ -165,6 +166,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
+                            android:id="@+id/btnDangGiao"
                             android:layout_gravity="center"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
@@ -186,6 +188,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
+                            android:id="@+id/btnDangGiaoHang"
                             android:layout_gravity="center"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
@@ -231,10 +234,12 @@
                 android:layout_alignParentBottom="true"
                 android:background="#E2E2E2" />
             <RelativeLayout
+                android:id="@+id/boxDanhGia"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
 
                 <ImageView
+                    android:id="@+id/btnHuyDonHang"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
@@ -307,6 +312,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/boxDaXemGanDay"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
 
@@ -345,6 +351,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/boxThietLapTaiKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
 
@@ -383,6 +390,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/boxTroGiup"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
 
@@ -419,6 +427,7 @@
                             android:layout_height="1dp"/>
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/boxThongTin"
                         android:layout_width="match_parent"
                         android:layout_height="60dp">
 

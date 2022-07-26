@@ -14,6 +14,9 @@ public interface UserController {
     @POST("user/create")
     Call<User> createUser(@Body User user);
 
+    @POST("user/login-google")
+    Call<User> loginGoogle(@Body User user);
+
     @POST("user/login")
     Call<User> login(@Body User user);
 
