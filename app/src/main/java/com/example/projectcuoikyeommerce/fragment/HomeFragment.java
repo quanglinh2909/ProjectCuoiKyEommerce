@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -139,6 +140,7 @@ public class HomeFragment extends Fragment implements HomeEvent {
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void initTrademark() {
         branchList.addAll(fragmentHomePresenter.getListBranch());
+
         adapterLogo=new AdapterLogo(branchList);
         recyclerviewLogo.setLayoutManager(new GridLayoutManager(mView.getContext(),3));
         recyclerviewLogo.setAdapter(adapterLogo);

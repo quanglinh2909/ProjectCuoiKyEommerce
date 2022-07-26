@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.AboutActivity">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="20dp"
+        android:layout_height="match_parent"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/timeLineBound"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/timeLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.lriccardo.timelineview.TimelineView
+                    app:indicator_style="empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    app:timeline_item_type="middle"
+                    app:line_width="5dp"
+                    app:indicator_color="@android:color/holo_blue_dark"
+                    app:line_color="@android:color/darker_gray" />
+                <com.lriccardo.timelineview.TimelineView
+                    app:indicator_style="empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    app:timeline_item_type="middle"
+                    app:line_width="5dp"
+                    app:indicator_color="@android:color/holo_blue_dark"
+                    app:line_color="@android:color/darker_gray" />
+                <com.lriccardo.timelineview.TimelineView
+                    app:indicator_style="empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    app:timeline_item_type="middle"
+                    app:line_width="5dp"
+                    app:indicator_color="@android:color/holo_blue_dark"
+                    app:line_color="@android:color/darker_gray" />
+                <com.lriccardo.timelineview.TimelineView
+                    app:indicator_style="empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    app:timeline_item_type="middle"
+                    app:line_width="5dp"
+                    app:indicator_color="@android:color/holo_blue_dark"
+                    app:line_color="@android:color/darker_gray" />
+                <com.lriccardo.timelineview.TimelineView
+                    app:indicator_style="empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    app:timeline_item_type="middle"
+                    app:line_width="5dp"
+                    app:indicator_color="@android:color/holo_blue_dark"
+                    app:line_color="@android:color/darker_gray" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/timeLine"
+                android:id="@+id/time_line_list"
+                android:orientation="vertical"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_below="@+id/timeLineBound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tầm Nhìn"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người sáng lập"
+
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    />
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/under_line"
+                    android:layout_gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trở thành tập đoàn với chuỗi cửa hàng và các công ty con,
+                phát triển bền vững lâu dài duy trì và phát triển thương hiệu giá trị thương hiệu trở nên uy tín, có sức cạnh tranh trong nước và quốc tế."
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Về Đội Ngũ Nhân Công"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quản lý"
+
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    />
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/under_line"
+                    android:layout_gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Khi quy mô kinh doanh online mở rộng, một mình chủ cửa hàng không thể kiêm nghiệm tất cả công việc, Do đó cần xây dựng đội ngũ nhân sự
+của chúng tôi được đào tạo một cách chuyên nghiệp với những vai trò chủ chốt như: Nhân viên bán hàng, Nhân viên Marketing, Nhân viên kế toán,
+Nhân viên kho và vận chuyển"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiêu Chí Hoạt Động"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="400"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người sáng lập"
+
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    />
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/under_line"
+                    android:layout_gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Chất lượng hàng đầu.\n- Dịch vụ hoàn hảo, chuyên nghiệp.\n- Đối tác tin cậy.\n- Môi trường làm việc lý tưởng.\n- Phát triển bền vững."
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/tenor_sans"
+                    android:textFontWeight="100"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

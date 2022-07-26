@@ -36,5 +36,130 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="content_1">
+        1. ĐĂNG KÝ TÀI KHOẢN\nTrong trường hợp Quý khách đăng kí tài khoản với website để tiện đặt hàng &amp; theo dõi thông tin, Quý khách có trách nhiệm với mật khẩu, tài khoản và hoạt động của mình trên web. Ngoài ra, Quý khách cần thông báo cho Seven.AM biết khi tài khoản bị truy cập trái phép. Seven.AM không chịu bất kỳ trách nhiệm nào, dù trực tiếp hay gián tiếp, đối với những thiệt hại hoặc mất mát gây ra nếu Quý khách không tuân thủ quy định. Vui lòng không sử dụng bất kỳ phần nào của trang web này với mục đích thương mại hoặc nhân danh bất kỳ đối tác thứ ba nào nếu không được Seven.AM cho phép bằng văn bản. Nếu vi phạm các điều khoản tại đây, Seven.AM sẽ hủy tài khoản của Quý khách mà không cần báo trước. Khi đăng ký trên website, Quý khách đã chọn đồng ý nhận email quảng cáo từ website. Nếu không muốn tiếp tục nhận email, Quý khách có thể từ chối bằng cách thực hiện theo hướng dẫn của Seven.AM trong mỗi email.
+        \n2. HỦY BỎ ĐƠN HÀNG\nTrường hợp Quý khách muốn hủy bỏ đơn hàng đã thực hiện trên website, xin vui lòng liên hệ số Hotline: 092.405.8888 để yêu cầu hủy đơn hàng hoặc từ chối nhận hàng trong trường hợp đơn hàng của Quý khách đang được vận chuyển.
+        \n3. QUYỀN SỞ HỮU TRÍ TUỆ\nMọi quyền sở hữu trí tuệ (đã đăng ký hoặc chưa đăng ký), nội dung thông tin và tất cả các thiết kế, văn bản, đồ họa, phần mềm, hình ảnh, video, âm nhạc, âm thanh, biên dịch phần mềm, mã nguồn và phần mềm cơ bản trên website đều là tài sản của Seven.AM. Toàn bộ nội dung của trang web được bảo vệ bởi luật bản quyền của Việt Nam và các công ước quốc tế. Bản quyền đã được bảo lưu. Mọi thông tin giao dịch sẽ được bảo mật ngoại trừ trong trường hợp cơ quan pháp luật yêu cầu.
+        \n4. GIẢI QUYẾT TRANH CHẤP\nNếu có tranh cãi, khiếu nại hoặc tranh chấp phát sinh từ hoặc liên quan đến giao dịch tại website hoặc liên quan các quy định và điều kiện này, Seven.AM mong muốn được giải quyết bằng hình thức thương lượng, hòa giải. Trong trường hợp không thể thương lượng, Seven.AM tôn trọng quyết định của khách hàng và khiếu nại sẽ được giải quyết theo pháp luật Việt Nam.
+    </string>
+    <string name="content_2">
+1. SHIP COD TẠI NHÀ:\n
+Ship COD tại nhà là hình thức khách hàng thanh toán khi nhận hàng. Với hình thức thanh toán qua ship COD tại nhà, Quý khách vui lòng thanh toán đơn hàng và chi phí ship theo quy định của công ty cho bên giao vận.
+\n2. THANH TOÁN CHUYỂN KHOẢN TRƯỚC:\n
+Với thanh toán chuyển khoản trước, Quý khách vui lòng chọn một trong số các tài khoản sau đây: Chủ tài khoản: Công ty cổ phần HBD TK số 1251 000 2000 500 - BIDV chi nhánh Đông Đô TK số 116002 808 980 - Vietinbank chi nhánh Đống Đa TK số 101 501 5326 - Vietcombank chi nhánh Hà Nội Nội dung chuyển khoản: Tên người chuyển khoản + số điện thoại + mã đơn hàng hoặc mã sản phẩm. Ngay sau khi nhận được tiền chuyển vào tài khoản, Seven.AM sẽ tiến hành lập đơn hàng và giao hàng ngay cho Quý khách. Lưu ý: Với cả hai hình thức thanh toán, Seven.AM sẽ liên hệ với Quý khách qua email &amp; điện thoại để xác nhận về đơn hàng &amp; số tiền Quý khách cần thanh toán. Nếu Quý khách chưa nhận được thông tin xác nhận, vui lòng liên hệ lại với Seven.AM &amp; không thực hiện thanh toán trước khi nhận được xác nhận đơn hàng. Khi mua sắm trên website, nếu còn bất kì câu hỏi nào về đơn hàng, hướng dẫn thanh toán, giao hàng, xin Quý khách vui lòng liên hệ với Seven.AM qua hotline: 092.405.8888 Trân trọng cám ơn!
+    </string>
+    <string name="content_3">
+1. HÌNH THỨC MUA HÀNG TRỰC TUYẾN\n
+Chọn kích cỡ, màu sắc, số lượng sản phẩm rồi click vào nút “Mua hàng ngay” để đưa sản phẩm vào giỏ hàng của mình. - Để lựa chọn thêm sản phẩm khác, vui lòng click vào nút “Tiếp tục mua hàng”. Nếu không, Quý khách vui lòng click vào nút “Gửi đơn hàng” để tiếp tục quy trình mua hàng và thanh toán.
+\nXem thêm: Phương thức thanh toán
+
+\n2. HÌNH THỨC MUA HÀNG QUA ĐIỆN THOẠI\n
+Chọn kích cỡ, màu sắc, số lượng sản phẩm, sau đó gọi hoặc gửi tin nhắn cho Seven.AM vào số hotline: 092.405.8888 để đặt hàng, nhân viên của Seven.AM sẽ liên hệ lại để xác nhận thông tin sản phẩm của và hướng dẫn Quý khách chuyển khoản thanh toán. (*) Nếu chọn hình thức mua hàng qua điện thoại, Quý khách vui lòng bỏ qua bước "Gửi đơn hàng"
+    </string>
+    <string name="content_4">
+1. CHÍNH SÁCH ĐỔI TRẢ SẢN PHẨM\n
+Áp dụng đổi – trả các sản phẩm nguyên giá và sản phẩm giảm giá dưới 50% trong thời gian 30 ngày kể từ ngày mua hàng. Áp dụng đổi trả đối với sản phẩm lỗi do nhà sản xuất, hoặc sản phẩm khách hàng mua đi tặng được ghi chú trên hóa đơn ngay khi mua hàng
+\nSản phẩm đổi trả phải còn nguyên tem, nhãn mác, chưa qua sử dụng, không có mùi hóa chất, mùi cơ thể và có hóa đơn mua hàng kèm theo.
+\nSản phẩm đổi phải bằng hoặc cao hơn giá trị sản phẩm tại thời điểm thanh toán trước đó. Trong trường hợp khách hàng chọn sản phẩm đổi có giá trị thấp hơn - số tiền còn lại sẽ không được hoàn trả.
+\nĐịa điểm đổi sản phẩm: Toàn bộ các showroom trực thuộc trên toàn hệ thống Seven.AM
+\n2. CÁC TRƯỜNG HỢP KHÔNG ÁP DỤNG CHÍNH SÁCH ĐỔI TRẢ\n
+Sản phẩm mua quá thời gian 30 ngày và mua trong chương trình khuyến mại giảm giá từ 50% trở lên
+\nSản phẩm phụ kiện: Áo lót, quần lót, áo nửa người, áo quây, quần tất, quần gen..
+\nSản phẩm đã bị thay đổi thiết kế so với thiết kế ban đầu.
+\nMỌI Ý KIẾN ĐÓNG GÓP HOẶC CẦN HỖ TRỢ KHIẾU NẠI, QUÝ KHÁCH VUI LÒNG LIÊN HỆ HOTLINE: 1900 633 694
+    </string>
+    <string name="content_5">
+1. CHÍNH SÁCH THỬ SẢN PHẨM\n
+Chỉ áp dụng thử đối với sản phẩm may mặc và sản phẩm phụ kiện như: áo nửa người, áo chống nắng, giầy, guốc, sandal. Quý khách vui lòng không thử sản phẩm phụ kiện mặc bên trong: áo lót/quần lót/quần tất/áo quây/quần mặc trong váy.
+\nKhi thử sản phẩm, Quý khách vui lòng giữ nguyên trạng sản phẩm, không làm mất tem, mác gắn liền với sản phẩm, các chi tiết trang trí sản phẩm hoặc phụ kiện đi kèm.
+\nQuý khách nên yêu cầu sự hỗ trợ từ nhân viên bán hàng khi thử đồ: lấy sản phẩm thử, kéo khóa sản phẩm.
+\n2. CHÍNH SÁCH BẢO HÀNH SẢN PHẨM\n
+Nhận sửa chữa miễn phí các trường hợp: cắt gấu, lên gấu, bóp nới sản phẩm, thay khóa, may đường chỉ.
+\nKhông bảo hành phần phụ kiện trang trí đính kèm sản phẩm (đá, cườm,...), chỉ hỗ trợ đính lại khi phụ kiện bị rơi.
+\nNhận sửa chữa có phí các trường hợp: thay thân, thay vải, may hoặc sửa phức tạp không phải do lỗi nhà sản xuất.
+\nKhông nhận sửa chữa, bảo hành những lỗi không phải do nhà sản xuất của sản phẩm phụ kiện: Áo nửa người/áo lót/quần lót/quần tất/áo quây/quần mặc trong váy, túi xách, ví, giày dép, vòng cổ, khuyên tai,...
+\n3. CÁC TRƯỜNG HỢP KHÔNG ÁP DỤNG CHÍNH SÁCH BẢO HÀNH, ĐỔI TRẢ\n
+\nSản phẩm mua quá thời gian 30 ngày và mua trong chương trình khuyến mại giảm giá từ 50% trở lên
+\nSản phẩm phụ kiện: Áo lót, quần lót, áo nửa người, áo quây, quần tất, quần gen..
+\nSản phẩm đã bị thay đổi thiết kế so với thiết kế ban đầu.
+\nMỌI Ý KIẾN ĐÓNG GÓP HOẶC CẦN HỖ TRỢ KHIẾU NẠI, QUÝ KHÁCH VUI LÒNG LIÊN HỆ HOTLINE: 1900 633 694
+    </string>
+    <string name="content_6">
+1. MỤC ĐÍCH THU THẬP THÔNG TIN CÁ NHÂN CỦA NGƯỜI TIÊU DÙNG\n
+
+Cung cấp dịch vụ cho khách hàng và quản lý, sử dụng thông tin cá nhân của người tiêu dùng nhằm mục đích quản lý cơ sở dữ liệu về người tiêu dùng và kịp thời xử lý các tình huống phát sinh (nếu có).
+
+\n2. PHẠM VI SỬ DỤNG THÔNG TIN CÁ NHÂN\n
+
+Website sử dụng thông tin của người tiêu dùng cung cấp để:
+
+\nCung cấp các dịch vụ đến người tiêu dùng
+\nGửi các thông báo về các hoạt động trao đổi thông tin giữa người tiêu dùng và Seven.AM
+\nNgăn ngừa các hoạt động phá hủy, chiếm đoạt tài khoản người dùng của người tiêu dùng hoặc các hoạt động giả mạo người tiêu dùng
+\nLiên lạc và giải quyết khiếu nại với người tiêu dùng;
+\nXác nhận và trao đổi thông tin về giao dịch của người tiêu dùng tại Seven.AM;
+\nTrong trường hợp có yêu cầu của cơ quan quản lý nhà nước có thẩm quyền.
+\n3. THỜI GIAN LƯU TRỮ THÔNG TIN CÁ NHÂN\n
+
+Không có thời hạn ngoại trừ trường hợp người tiêu dùng gửi có yêu cầu hủy bỏ tới cho ban quản trị hoặc công ty giải thể hoặc bị phá sản.
+
+\n4. NHỮNG NGƯỜI HOẶC TỔ CHỨC CÓ THỂ ĐƯỢC TIẾP CẬN VỚI THÔNG TIN CÁ NHÂN CỦA NGƯỜI TIÊU DÙNG\n
+
+\nNgười tiêu dùng đồng ý rằng, trong trường hợp cần thiết, các cơ quan/ tổ chức/cá nhân sau có quyền được tiếp cận và thu thập các thông tin cá nhân của mình, bao gồm:
+
+\nBan quản trị.
+\nBên thứ ba có dịch vụ tích hợp với website sevenam.vn
+\nCông ty tổ chức sự kiện và nhà tài trợ phối hợp cùng Seven.AM
+\nCông ty nghiên cứu thị trường
+\nCố vấn tài chính, pháp lý và công ty kiểm toán
+\nBên khiếu nại chứng minh được hành vi vi phạm của người tiêu dùng
+\nTheo yêu cầu của cơ quan nhà nước có thẩm quyền
+\n5. ĐỊA CHỈ CỦA ĐƠN VỊ THU THẬP VÀ QUẢN LÝ THÔNG TIN\n
+Công ty Cổ phần HBD
+\nĐịa chỉ ĐKKD: Số 47 Đường Đinh Điền, Phường Lam Sơn, Thành phố Hưng Yên, Tỉnh Hưng Yê
+\nHotline: 1900 633 694
+\nEmail: info@sevenam.vn
+\n6. PHƯƠNG TIỆN VÀ CÔNG CỤ ĐỂ NGƯỜI TIÊU DÙNG TIẾP CẬN VÀ CHỈNH SỬA DỮ LIỆU THÔNG TIN CÁ NHÂN CỦA MÌNH\n
+Người tiêu dùng có quyền tự kiểm tra, cập nhật, điều chỉnh hoặc hủy bỏ thông tin cá nhân của mình bằng cách đăng nhập vào website sevenam.vn và chỉnh sửa thông tin cá nhân hoặc yêu cầu ban quản trị thực hiện việc này.
+\nNgười tiêu dùng có quyền gửi khiếu nại về việc lộ thông tin cá nhân của mình cho bên thứ 3 đến ban quản trị. Khi tiếp nhận những phản hồi này, Seven.AM sẽ xác nhận lại thông tin, phải có trách nhiệm trả lời lý do và hướng dẫn người tiêu dùng khôi phục và bảo mật lại thông tin.
+\nCác hình thức tiếp nhận thông tin khiếu nại của người tiêu dùng:
+\nQua email: info@htl.vn
+\nQua điện thoại: 1900 633 694
+\n7. CAM KẾT BẢO MẬT THÔNG TIN CÁ NHÂN CỦA NGƯỜI TIÊU DÙNG\n
+Thông tin cá nhân của người tiêu dùng trên website được Ban quản trị cam kết bảo mật tuyệt đối theo chính sách bảo mật thông tin cá nhân được đăng tải trên website sevenam.vn. Việc thu thập và sử dụng thông tin của mỗi người tiêu dùng chỉ được thực hiện khi có sự đồng ý của người tiêu dùng trừ những trường hợp pháp luật có quy định khác và quy định này.
+\nKhông sử dụng, không chuyển giao, cung cấp hoặc tiết lộ cho bên thứ 3 về thông tin cá nhân của người tiêu dùng khi không có sự đồng ý của người tiêu dùng ngoại trừ các trường hợp được quy định tại quy định này hoặc quy định của pháp luật.
+\nTrong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân của người tiêu dùng, ban quản trị có trách nhiệm thông báo và làm việc với cơ quan chức năng điều tra và xử lý kịp thời, đồng thời thông báo cho người tiêu dùng được biết về vụ việc.
+\n8. CƠ CHẾ TIẾP NHẬN VÀ GIẢI QUYẾT KHIẾU NẠI LIÊN QUAN ĐẾN VIỆC THÔNG TIN CỦA NGƯỜI TIÊU DÙNG\n
+Khi phát hiện thông tin cá nhân của mình bị sử dụng sai mục đích hoặc phạm vi, người tiêu dùng gọi điện thoại tới số 1900 633 694 để khiếu nại và cung cấp chứng cứ liên quan tới vụ việc cho ban quản trị. Ban quản trị cam kết sẽ phản hồi ngay lập tức hoặc muộn nhất là trong vòng 24 (hai mươi tư) giờ làm việc kể từ thời điểm nhận được khiếu nại.
+    </string>
+    <string name="content_7">
+1.QUYỀN LỢI SINH NHẬT\n
+Nhằm tri ân với các Quý khách hàng đã tin tưởng và sử dụng sản phẩm, Seven.AM trân trọng dành tặng Quý khách hàng trong tháng sinh nhật món quà tri ân như sau:
+\nTừ 01 điểm – dưới 05 điểm: Chiết khấu 500.000đ với hóa đơn nguyên giá từ 1 triệu đồng trở lên.
+\nTừ 05 điểm – dưới 10 điểm: Chiết khấu 800.000đ với hóa đơn nguyên giá từ 1.5 triệu đồng trở lên.
+\nKhách VIP Bạc: Chiết khấu 50% 1 sản phẩm nguyên giá.
+\nKhách VIP Vàng: Chiết khấu 50% 2 sản phẩm nguyên giá.
+\nKhách VIP Ruby:
+\n\t- Điểm từ 40 - dưới 80 điểm: Chiết khấu 50% 3 sản phẩm nguyên giá và tặng 01 thẻ quà tặng 500.000đ mua hàng nguyên giá
+\n\t- Điểm từ 80 - dưới 100 điểm: Chiết khấu 50% 3 sản phẩm nguyên giá và tặng 01 thẻ quà tặng 1.000.000đ mua hàng nguyên giá
+
+Khách VIP Kim cương:
+\n\t- Điểm từ 100 – dưới 200 điểm: Chiết khấu 50% 4 sản phẩm nguyên giá, tặng 01 thư chúc mừng tương ứng với 1 sản phẩm trị giá 1.500.000đ
+\n\t- Điểm từ 200 - dưới 400 điểm: Chiết khấu 50% 5 sản phẩm nguyên giá, tặng 01 thư chúc mừng tương ứng với 1 sản phẩm trị giá 2.000.000đ.
+\n\t- Điểm từ 400 điểm trở lên: Chiết khấu 50% 6 sản phẩm nguyên giá, tặng 01 thư chúc mừng tương ứng 1 sản phẩm trị giá 3.000.000đ
+\n* LƯU Ý
+\nQuý khách chỉ được hưởng ưu đãi sinh nhật khi mang theo CMND hoặc giấy tờ tùy thân có ảnh.
+\nƯu đãi sinh nhật chỉ áp dụng với sản phẩm nguyên giá (Không áp dụng với dòng sản phẩm Manto khâu tay cao cấp).
+\nDòng sản phẩm Manto khâu tay cao cấp chỉ áp dụng cùng ưu đãi thẻ VIP, không áp dụng cùng ưu đãi sinh nhật, chương trình khuyến mại và các ưu đãi khác.
+\nThẻ quà tặng sinh nhật chỉ áp dụng cùng chiết khấu thẻ VIP. Không áp dụng đồng thời cùng các ưu đãi khác (Ưu đãi sinh nhật, chương trình khuyến mại, voucher...)
+\nTừ 02 sản phẩm giảm 50% áp dụng cho 01 hóa đơn hoặc mua rời ngày, chỉ sử dụng trong tháng sinh nhật.
+\nĐối với khách hàng VIP Ruby và Kim cương: Khách hàng được nhận thẻ quà tặng/sản phẩm tặng khi có phát sinh mua hàng trong 03 tháng trước thời điểm sinh nhật.
+\nSản phẩm tặng trên thư chúc mừng không có giá trị quy đổi thành tiền mặt.
+\n2. CÁC TRƯỜNG HỢP KHÔNG ÁP DỤNG CHÍNH SÁCH ĐỔI TRẢ\n
+Sản phẩm mua quá thời gian 30 ngày và mua trong chương trình khuyến mại giảm giá từ 50% trở lên
+\nSản phẩm phụ kiện: Áo lót, quần lót, áo nửa người, áo quây, quần tất, quần gen..
+\nSản phẩm đã bị thay đổi thiết kế so với thiết kế ban đầu.
+\nMỌI Ý KIẾN ĐÓNG GÓP HOẶC CẦN HỖ TRỢ KHIẾU NẠI, QUÝ KHÁCH VUI LÒNG LIÊN HỆ HOTLINE: 1900 633 694
+</string>
 
 </resources>

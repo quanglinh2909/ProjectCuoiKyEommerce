@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:id="@+id/boundHistoryImage"
+        app:cardCornerRadius="40dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9">
+        <ImageView
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:padding="10dp"
+            android:id="@+id/historyImage"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:src="@drawable/ic_shopping_bag"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/boundHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/historyTextHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:text="Foundation - 1999"/>
+        <TextView
+            android:id="@+id/historyTextDescip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Du an khoi nghiep dau tay"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.projectcuoikyeommerce.adapter.home;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class AdapterLogo extends RecyclerView.Adapter<AdapterLogo.ViewHolderLogo
     public void onBindViewHolder(@NonNull ViewHolderLogo holder, int position) {
         Branch branch=logos.get(position);
         if(branch==null) return;
+        Log.d("ÙDFD", "   "+URL.BASE_URL+branch.getImage());
         Glide.with(context).load(URL.BASE_URL+branch.getImage()).into(holder.logoImage);
 
     }
